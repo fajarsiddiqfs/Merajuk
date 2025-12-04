@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Supply</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">CURATED SUPPLY</div>
+      <h1>Discover well-designed, carefully curated products</h1>
+      <p class="subtitle">Subscribe and join 3,500+ readers for weekly emails featuring timeless, design-led products across home, work, and life.</p>
+      <form class="subscribe-form" onsubmit="handleSubmit(event)">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="disclaimer">
+        Subscribe to get a weekly roundup of the best products in your inbox every Monday.
+      </p>
+      <p class="disclaimer">
+        Select links may be affiliate based. Prices listed are non-dynamic and may change. I back what I share, and only include products I use, trust or see real value in.
+      </p>
+    </header>
+
+    <div class="categories">
+      <button class="category-btn active" onclick="filterCategory('all')">All</button>
+      <button class="category-btn" onclick="filterCategory('tech')">Tech</button>
+      <button class="category-btn" onclick="filterCategory('home')">Home</button>
+      <button class="category-btn" onclick="filterCategory('wear')">Wear</button>
+      <button class="category-btn" onclick="filterCategory('work')">Work</button>
+      <button class="category-btn" onclick="filterCategory('lifestyle')">Lifestyle</button>
+    </div>
+
+    <section class="products-section">
+      <div class="featured-products" id="products-grid">
+        <!-- Products will load here via script.js -->
+      </div>
+      <div class="show-more-container">
+        <button class="show-more-btn" onclick="showMore()">Show More</button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-left">
+        © 2024 Curated Supply. All rights reserved.
+      </div>
+      <div class="footer-right">
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">Newsletter</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
