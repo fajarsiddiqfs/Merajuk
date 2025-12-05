@@ -6,28 +6,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-
   <!-- Primary Meta Tags -->
 <title>Merajuk.com | Hadiah khas untuk yang tengah merajuk.</title>
 <meta name="title" content="Merajuk.com | Hadiah Emosi Untuk Hati yang Merajuk" />
 <meta name="description" content="Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
-
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://merajuk.com/" />
 <meta property="og:title" content="Merajuk.com | Hadiah khas untuk yang tengah merajuk." />
 <meta property="og:description" content="Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
 <meta property="og:image" content="https://i.ibb.co/1fMcZQwB/file-cover-11.png" />
-
 <!-- X (Twitter) -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://merajuk.com/" />
 <meta property="twitter:title" content="Merajuk.com | Hadiah khas untuk yang tengah merajuk." />
 <meta property="twitter:description" content="Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
 <meta property="twitter:image" content="https://i.ibb.co/1fMcZQwB/file-cover-11.png" />
-
 <!-- Meta Tags Generated with https://euphorya.co-->
-
 </head>
 <body>
   <div class="container">
@@ -38,15 +33,17 @@
         </div>
       </a>
       <p class="subtitle">Hadiah khas untuk yang tengah merajuk. </p>
-      <form class="subscribe-form" onsubmit="handleSubmit(event)">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+      <div class="search-form">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Cari produk..." oninput="handleSearch()">
+        <button type="button" id="clearSearch" onclick="clearSearch()" style="display: none;">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
       <p class="disclaimer">
         Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia.
       </p>
     </header>
-
     <div class="categories">
       <button class="category-btn active" onclick="filterCategory('all')">All</button>
       <button class="category-btn" onclick="filterCategory('tech')">Tech</button>
@@ -55,7 +52,6 @@
       <button class="category-btn" onclick="filterCategory('work')">Work</button>
       <button class="category-btn" onclick="filterCategory('lifestyle')">Lifestyle</button>
     </div>
-
     <section class="products-section">
       <div class="featured-products" id="products-grid">
         <!-- Products will load here via script.js -->
@@ -64,7 +60,6 @@
         <button class="show-more-btn" onclick="showMore()">Lihat Lagi</button>
       </div>
     </section>
-
     <footer>
       <div class="footer-left">
         &copy; 2021<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Merajuk.com</a>
@@ -76,7 +71,6 @@
       </div>
     </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
