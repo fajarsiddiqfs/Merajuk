@@ -38,13 +38,18 @@ function renderProducts() {
   visible.forEach(p => {
     const card = document.createElement('div');
     card.className = 'product-card';
+    
+    // Wrap the product card in a clickable link
     card.innerHTML = `
-      <div class="product-image"><img src="${p.image}" alt="${p.title}"></div>
-      <div class="product-info">
-        <h3 class="product-title">${p.title}</h3>
-        <span class="product-price">${p.price}</span>
-      </div>
+      <a href="${p.link}" target="_blank" rel="noopener noreferrer">
+        <div class="product-image"><img src="${p.image}" alt="${p.title}"></div>
+        <div class="product-info">
+          <h3 class="product-title">${p.title}</h3>
+          <span class="product-price">${p.price}</span>
+        </div>
+      </a>
     `;
+    
     grid.appendChild(card);
   });
   
