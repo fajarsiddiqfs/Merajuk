@@ -3,26 +3,396 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-  <!-- Primary Meta Tags -->
-<title>Merajuk.com | Hadiah khas untuk yang tengah merajuk.</title>
-<meta name="title" content="Merajuk.com | Hadiah Emosi Untuk Hati yang Merajuk" />
-<meta name="description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://merajuk.com/" />
-<meta property="og:title" content="Merajuk.com | Hadiah khas untuk yang tengah merajuk." />
-<meta property="og:description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
-<meta property="og:image" content="https://i.ibb.co/1fMcZQwB/file-cover-11.png" />
-<!-- X (Twitter) -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://merajuk.com/" />
-<meta property="twitter:title" content="Merajuk.com | Hadiah khas untuk yang tengah merajuk." />
-<meta property="twitter:description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
-<meta property="twitter:image" content="https://i.ibb.co/1fMcZQwB/file-cover-11.png" />
-<!-- Meta Tags Generated with https://euphorya.co-->
+  <title>Merajuk.com | Hadiah khas untuk yang tengah merajuk.</title>
+  <meta name="title" content="Merajuk.com | Hadiah Emosi Untuk Hati yang Merajuk" />
+  <meta name="description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://merajuk.com/" />
+  <meta property="og:title" content="Merajuk.com | Hadiah khas untuk yang tengah merajuk." />
+  <meta property="og:description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
+  <meta property="og:image" content="https://i.ibb.co/1fMcZQwB/file-cover-11.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://merajuk.com/" />
+  <meta property="twitter:title" content="Merajuk.com | Hadiah khas untuk yang tengah merajuk." />
+  <meta property="twitter:description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
+  <meta property="twitter:image" content="https://i.ibb.co/1fMcZQwB/file-cover-11.png" />
+  <!-- Meta Tags Generated with https://euphorya.co-->
+
+  <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+header {
+    margin-bottom: 80px;
+    text-align: center;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 48px;
+    color: #1a1a1a;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+.subtitle {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    justify-content: center;
+    position: relative;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    color: #999;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 14px 18px 14px 48px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #1a1a1a;
+}
+
+#clearSearch {
+    position: absolute;
+    right: 12px;
+    padding: 8px;
+    background-color: transparent;
+    color: #999;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+#clearSearch:hover {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+}
+
+button {
+    padding: 14px 28px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.disclaimer {
+    font-size: 13px;
+    color: #999;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.categories {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 40px;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.categories::-webkit-scrollbar {
+    height: 4px;
+}
+
+.categories::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.categories::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+.categories::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+.category-btn {
+    padding: 10px 24px;
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.category-btn:hover {
+    background-color: #f5f5f5;
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+}
+
+.category-btn.active {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+}
+
+.products-section {
+    margin-top: 60px;
+}
+
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+.show-more-container {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.show-more-btn {
+    padding: 14px 40px;
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.show-more-btn:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    margin-top: 100px;
+    padding-top: 40px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    font-size: 13px;
+    color: #999;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    font-size: 13px;
+    color: #999;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: #1a1a1a;
+}
+
+@media (max-width: 1024px) {
+    .featured-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .search-form {
+        max-width: 100%;
+    }
+
+    #searchInput {
+        font-size: 16px;
+    }
+
+    .categories {
+        gap: 8px;
+    }
+
+    .category-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .featured-products {
+        grid-template-columns: 1fr;
+    }
+
+    .categories {
+        justify-content: flex-start;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-right {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+}
+  </style>
 </head>
 <body>
   <div class="container">
@@ -53,26 +423,137 @@
     </div>
     <section class="products-section">
       <div class="featured-products" id="products-grid">
-        <!-- Products will load here via script.js -->
+        <!-- Products will load here via script -->
       </div>
       <div class="show-more-container">
         <button class="show-more-btn" onclick="showMore()">Lihat Lagi</button>
-        </br>
-        </br>
+        <br><br>
         <h6>"Jangan Merajuk, Cepat Grab!"</h6>
       </div>
     </section>
     <footer>
       <div class="footer-left">
-        &copy; 2021<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Merajuk.com</a>
+        &copy; 2021<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Merajuk.com
       </div>
       <div class="footer-right">
-       <a href="https://tiktok.com/@merajukHQ" class="social-link">
-        <i class="fa-brands fa-tiktok"></i> Tiktok @MerajukHQ 
-      </a>
+        <a href="https://tiktok.com/@merajukHQ" class="social-link">
+          <i class="fa-brands fa-tiktok"></i> Tiktok @MerajukHQ
+        </a>
       </div>
     </footer>
   </div>
-  <script src="script.js"></script>
+
+  <script>
+    const products = [
+      { "title": "Kasut Ikonik", "price": "RM353", "category": "lifestyle", "image": "images/product1.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Jam Tangan Moden", "price": "RM6,063", "category": "wear", "image": "images/product2.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Penjejak Pintar", "price": "RM136", "category": "tech", "image": "images/product3.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Peranti Saku", "price": "RM1,170", "category": "tech", "image": "images/product4.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Kasut Sukan", "price": "RM1,316", "category": "wear", "image": "images/product5.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Gajet Pintar", "price": "RM846", "category": "tech", "image": "images/product6.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Pakaian Kasual", "price": "RM1,387", "category": "wear", "image": "images/product7.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Perhiasan Rumah", "price": "RM235", "category": "home", "image": "images/product8.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Papan Kekunci Mini", "price": "RM465", "category": "work", "image": "images/product9.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Tetikus Pintar", "price": "RM371", "category": "work", "image": "images/product10.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Cawan Pintar", "price": "RM606", "category": "home", "image": "images/product11.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Fon Telinga Pintar", "price": "RM1,170", "category": "tech", "image": "images/product12.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Beg Galas Harian", "price": "RM1,405", "category": "lifestyle", "image": "images/product13.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Buku Nota", "price": "RM103", "category": "work", "image": "images/product14.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Kerusi Pejabat Ergonomik", "price": "RM7,962", "category": "work", "image": "images/product15.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Pen Gel", "price": "RM9", "category": "work", "image": "images/product16.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Pembesar Suara Pintar", "price": "RM1,170", "category": "tech", "image": "images/product17.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Pakaian Dalam Ringan", "price": "RM66", "category": "wear", "image": "images/product18.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Nota Harian", "price": "RM56", "category": "work", "image": "images/product19.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Dompet Slim", "price": "RM418", "category": "lifestyle", "image": "images/product20.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Alat Penapis Kopi", "price": "RM38", "category": "home", "image": "images/product21.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Pembaca Buku Digital", "price": "RM652", "category": "tech", "image": "images/product22.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Dompet Kalis Air", "price": "RM353", "category": "lifestyle", "image": "images/product23.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Jaket Selesa", "price": "RM1,076", "category": "wear", "image": "images/product24.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Beg Galas Ringkas", "price": "RM376", "category": "lifestyle", "image": "images/product25.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Alat Dapur Pintar", "price": "RM400", "category": "home", "image": "images/product26.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Periuk Besar", "price": "RM1,546", "category": "home", "image": "images/product27.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Sistem Rak Serbaguna", "price": "RM4,183", "category": "home", "image": "images/product28.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Kasut Kasual Moden", "price": "RM1,998", "category": "wear", "image": "images/product29.png", "link": "https://merajuk.com?via=merajuk" },
+      { "title": "Lampu Meja", "price": "RM564", "category": "home", "image": "images/product30.png", "link": "https://merajuk.com?via=merajuk" }
+    ];
+
+    let currentlyShowing = 9;
+    let currentCategory = 'all';
+    let searchQuery = '';
+    const showPerClick = 9;
+
+    function renderProducts() {
+      const grid = document.getElementById('products-grid');
+      grid.innerHTML = '';
+
+      let filtered = currentCategory === 'all' ? products : products.filter(p => p.category === currentCategory);
+
+      if (searchQuery) {
+        filtered = filtered.filter(p =>
+          p.title.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+      }
+
+      const visible = filtered.slice(0, currentlyShowing);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<p style="text-align: center; color: #999; grid-column: 1/-1; padding: 40px 0;">Tiada produk dijumpai.</p>';
+        document.querySelector('.show-more-btn').style.display = 'none';
+        return;
+      }
+
+      visible.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <a href="${p.link}" target="_blank" rel="noopener noreferrer">
+            <div class="product-image"><img src="${p.image}" alt="${p.title}"></div>
+            <div class="product-info">
+              <h3 class="product-title">${p.title}</h3>
+              <span class="product-price">${p.price}</span>
+            </div>
+          </a>
+        `;
+        grid.appendChild(card);
+      });
+
+      document.querySelector('.show-more-btn').style.display = filtered.length > currentlyShowing ? 'inline-block' : 'none';
+    }
+
+    function filterCategory(category) {
+      currentCategory = category;
+      currentlyShowing = 9;
+      document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderProducts();
+    }
+
+    function showMore() {
+      currentlyShowing += showPerClick;
+      renderProducts();
+    }
+
+    function handleSearch() {
+      const input = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('clearSearch');
+      searchQuery = input.value.trim();
+      currentlyShowing = 9;
+      clearBtn.style.display = searchQuery ? 'flex' : 'none';
+      renderProducts();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('clearSearch');
+      input.value = '';
+      searchQuery = '';
+      clearBtn.style.display = 'none';
+      currentlyShowing = 9;
+      renderProducts();
+    }
+
+    // Initial render
+    renderProducts();
+  </script>
 </body>
 </html>
