@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +7,27 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
   <title>Merajuk.com | Hadiah khas untuk yang tengah merajuk.</title>
   <meta name="title" content="Merajuk.com | Hadiah Emosi Untuk Hati yang Merajuk" />
-  <meta name="description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
+  <meta name="description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://merajuk.com/" />
   <meta property="og:title" content="Merajuk.com | Hadiah khas untuk yang tengah merajuk." />
-  <meta property="og:description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
+  <meta property="og:description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi." />
   <meta property="og:image" content="https://i.ibb.co/1fMcZQwB/file-cover-11.png" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://merajuk.com/" />
   <meta property="twitter:title" content="Merajuk.com | Hadiah khas untuk yang tengah merajuk." />
-  <meta property="twitter:description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia." />
+  <meta property="twitter:description" content="Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi." />
   <meta property="twitter:image" content="https://i.ibb.co/1fMcZQwB/file-cover-11.png" />
+  <link rel="canonical" href="https://merajuk.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Merajuk.com" />
+  <meta name="keywords" content="hadiah merajuk, produk pilihan Malaysia, hadiah khas, afiliasi Malaysia, shopee Malaysia, amazon Malaysia" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:locale" content="ms_MY" />
+  <meta property="og:site_name" content="Merajuk.com" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Merajuk.com","url":"https://merajuk.com/","description":"Hadiah khas untuk yang tengah merajuk. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi.","inLanguage":"ms-MY","sameAs":["https://tiktok.com/@merajukHQ"]}
+  </script>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -304,16 +314,34 @@
 
     .footer-left { font-size: 13px; color: #444; }
 
-    .footer-right { display: flex; gap: 20px; }
-
-    .social-link {
-      font-size: 13px;
-      color: #555;
+    .footer-brand-link {
+      color: #666;
       text-decoration: none;
       transition: color 0.2s;
     }
 
+    .footer-brand-link:hover { color: #e8e8e8; }
+
+    .footer-right { display: flex; gap: 20px; }
+
+    .social-link {
+      font-size: 20px;
+      color: #555;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+    }
+
     .social-link:hover { color: #e8e8e8; }
+
+    .shopee-icon {
+      width: 20px;
+      height: 20px;
+    }
 
     .empty-msg {
       text-align: center;
@@ -333,7 +361,10 @@
       #searchInput { font-size: 16px; }
       .categories { gap: 8px; }
       .category-btn { padding: 8px 16px; font-size: 13px; }
-      .featured-products { grid-template-columns: 1fr; }
+      .featured-products { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .product-info { padding: 12px 14px; }
+      .product-title { font-size: 13px; }
+      .product-price { font-size: 12px; }
       footer { flex-direction: column; gap: 16px; text-align: center; }
       .footer-right { justify-content: center; }
     }
@@ -355,7 +386,7 @@
         </button>
       </div>
       <p class="disclaimer">
-        Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi. Tersedia di TikTok Malaysia.
+        Hadiah khas untuk yang tengah merajuk. Beberapa pautan ialah pautan afiliasi. Harga boleh berubah. Kami hanya kongsikan 30 produk yang digunakan, dipercayai dan benar-benar berbaloi.
       </p>
     </header>
 
@@ -379,17 +410,27 @@
 
     <footer>
       <div class="footer-left">
-        &copy; 2021<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Merajuk.com
+        &copy; <script>document.write(new Date().getFullYear());</script> Merajuk by <a href="https://euphorya.co/" target="_blank" rel="noopener noreferrer" class="footer-brand-link">Euphorya</a>
       </div>
       <div class="footer-right">
-        <a href="https://tiktok.com/@merajukHQ" class="social-link">
-          <i class="fa-brands fa-tiktok"></i> Tiktok @MerajukHQ
+        <a href="https://tiktok.com/@merajukHQ" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok @MerajukHQ">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://shopee.com.my" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Shopee">
+          <svg class="shopee-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 1.5c-1.93 0-3.5 1.57-3.5 3.5H5L3.5 21h17L19 5h-3.5c0-1.93-1.57-3.5-3.5-3.5zm0 1.5c1.1 0 2 .9 2 2H10c0-1.1.9-2 2-2zm-5.3 4h10.6l1.2 12.5H5.5L6.7 7zm5.3 2.5c-2.21 0-4 1.79-4 4 0 1.5.83 2.81 2.06 3.5L12 18.5l1.94-1.5C15.17 16.31 16 15 16 13.5c0-2.21-1.79-4-4-4zm0 1.5c1.38 0 2.5 1.12 2.5 2.5 0 .9-.48 1.69-1.2 2.13L12 16.5l-1.3-1.37C9.98 14.69 9.5 13.9 9.5 13c0-1.38 1.12-2.5 2.5-2.5z"/>
+          </svg>
+        </a>
+        <a href="https://amazon.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Amazon">
+          <i class="fa-brands fa-amazon"></i>
         </a>
       </div>
     </footer>
   </div>
 
   <script>
+    function isMobile() { return window.innerWidth <= 640; }
+
     const products = [
       { "title": "Kasut Ikonik", "price": "RM353", "category": "lifestyle", "image": "images/product1.png", "link": "https://merajuk.com?via=merajuk" },
       { "title": "Jam Tangan Moden", "price": "RM6,063", "category": "wear", "image": "images/product2.png", "link": "https://merajuk.com?via=merajuk" },
@@ -423,10 +464,10 @@
       { "title": "Lampu Meja", "price": "RM564", "category": "home", "image": "images/product30.png", "link": "https://merajuk.com?via=merajuk" }
     ];
 
-    let currentlyShowing = 9;
+    let currentlyShowing = isMobile() ? 10 : 9;
     let currentCategory = 'all';
     let searchQuery = '';
-    const showPerClick = 9;
+    const showPerClick = isMobile() ? 10 : 9;
 
     function renderProducts() {
       const grid = document.getElementById('products-grid');
@@ -471,7 +512,7 @@
 
     function filterCategory(category, btn) {
       currentCategory = category;
-      currentlyShowing = 9;
+      currentlyShowing = isMobile() ? 10 : 9;
       document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       renderProducts();
@@ -486,7 +527,7 @@
       const input = document.getElementById('searchInput');
       const clearBtn = document.getElementById('clearSearch');
       searchQuery = input.value.trim();
-      currentlyShowing = 9;
+      currentlyShowing = isMobile() ? 10 : 9;
       clearBtn.style.display = searchQuery ? 'flex' : 'none';
       renderProducts();
     }
@@ -496,11 +537,70 @@
       document.getElementById('clearSearch').style.display = 'none';
       input.value = '';
       searchQuery = '';
-      currentlyShowing = 9;
+      currentlyShowing = isMobile() ? 10 : 9;
       renderProducts();
     }
 
     renderProducts();
+  </script>
+
+  <button class="scroll-fab" id="scrollFab" onclick="scrollToggle()" aria-label="Scroll">
+    <i class="fas fa-chevron-up" id="scrollIcon"></i>
+  </button>
+
+  <style>
+    .scroll-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      background: #1a1a1a;
+      color: #aaa;
+      border: 1px solid #2e2e2e;
+      border-radius: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s, color 0.2s, border-color 0.2s;
+      pointer-events: none;
+    }
+    .scroll-fab.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+    .scroll-fab:hover {
+      background: #e8e8e8;
+      color: #0a0a0a;
+      border-color: #e8e8e8;
+    }
+    #scrollIcon { transition: transform 0.3s ease; }
+  </style>
+
+  <script>
+    const fab = document.getElementById('scrollFab');
+    const icon = document.getElementById('scrollIcon');
+    const atBottom = () => window.scrollY + window.innerHeight >= document.body.scrollHeight - 40;
+
+    function scrollToggle() {
+      if (atBottom()) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      fab.classList.toggle('visible', window.scrollY > 200);
+      icon.style.transform = atBottom() ? 'rotate(180deg)' : 'rotate(0deg)';
+    });
   </script>
 </body>
 </html>
