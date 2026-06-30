@@ -43,54 +43,153 @@
       from { opacity: 0; transform: translateY(-20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
     @keyframes cardPop {
       from { opacity: 0; transform: translateY(20px) scale(0.97); }
       to   { opacity: 1; transform: translateY(0) scale(1); }
     }
 
-    @keyframes shimmer {
-      0%   { background-position: -400px 0; }
-      100% { background-position: 400px 0; }
+    /* ── NAVBAR ── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid #1a1a1a;
+      animation: fadeInDown 0.5s ease both;
     }
 
-    .container {
+    .navbar-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 60px 24px;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
     }
 
-    header {
+    .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      color: #666;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover { color: #e8e8e8; background: #181818; }
+    .nav-link.active { color: #e8e8e8; background: #1e1e1e; }
+
+    .nav-mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #888;
+      font-size: 18px;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .nav-mobile-menu {
+      display: none;
+      flex-direction: column;
+      padding: 8px 24px 16px;
+      border-top: 1px solid #1a1a1a;
+      gap: 2px;
+    }
+
+    .nav-mobile-menu.open { display: flex; }
+
+    .nav-mobile-link {
+      font-size: 14px;
+      color: #777;
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-mobile-link:hover { color: #e8e8e8; background: #141414; }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      min-height: auto;
+    }
+
+    .hero-left {
+      animation: fadeInLeft 0.7s 0.1s ease both;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #555;
       margin-bottom: 24px;
-      text-align: center;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-      animation: fadeInDown 0.6s ease both;
     }
 
-    .logo {
-      font-size: 15px;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      margin-bottom: 40px;
+    .hero-title {
+      font-size: clamp(36px, 4.5vw, 60px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
       color: #e8e8e8;
+      margin-bottom: 20px;
     }
 
-    .logo img { filter: brightness(0) invert(1); }
+    .hero-accent {
+      color: #888;
+      font-style: italic;
+    }
 
+    .hero-sub {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    /* ── SEARCH (in hero) ── */
     .search-form {
       display: flex;
       align-items: center;
       position: relative;
-      max-width: 600px;
-      margin: 0 auto 16px;
-      animation: fadeInDown 0.6s 0.1s ease both;
+      margin-bottom: 16px;
     }
 
     .search-icon {
@@ -103,6 +202,7 @@
 
     #searchInput {
       flex: 1;
+      width: 100%;
       padding: 14px 18px 14px 48px;
       border: 1px solid #222;
       border-radius: 10px;
@@ -139,30 +239,10 @@
 
     #clearSearch:hover { background: #1f1f1f; color: #e8e8e8; }
 
-    .disclaimer {
-      font-size: 13px;
-      color: #555;
-      line-height: 1.5;
-      margin-bottom: 0;
-      animation: fadeInDown 0.6s 0.15s ease both;
-    }
-
+    /* ── SUB BAR (platform icons) ── */
     .sub-bar {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      max-width: 600px;
-      margin: 12px auto 16px;
-      animation: fadeInDown 0.6s 0.12s ease both;
-    }
-
-    .sub-bar-left {
-      font-size: 12px;
-      font-weight: 400;
-      color: #555;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     .sub-bar-right {
@@ -184,23 +264,97 @@
       flex-shrink: 0;
     }
 
-    .sub-icon svg {
-      width: 18px;
-      height: 18px;
+    .sub-icon svg { width: 18px; height: 18px; }
+    .sub-icon:hover { opacity: 1; }
+
+    /* ── VIDEO GRID (auto-scrolling marquee) ── */
+    .hero-right {
+      animation: fadeInRight 0.7s 0.2s ease both;
+      height: 420px;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+      mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
     }
 
-    .sub-icon:hover { opacity: 1; }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      height: 100%;
+    }
+
+    .video-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      animation: scrollUp 26s linear infinite;
+    }
+
+    .video-col.reverse {
+      animation-name: scrollDown;
+    }
+
+    .video-col:hover { animation-play-state: paused; }
+
+    @keyframes scrollUp {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-50%); }
+    }
+
+    @keyframes scrollDown {
+      from { transform: translateY(-50%); }
+      to   { transform: translateY(0); }
+    }
+
+    .video-cell {
+      aspect-ratio: 9 / 16;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #111;
+      border: 1px solid #1e1e1e;
+      flex-shrink: 0;
+    }
+
+    .video-cell iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .video-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #333;
+      font-size: 11px;
+    }
+
+    .video-placeholder i { font-size: 20px; color: #2a2a2a; }
+
+    /* ── CONTAINER (products section) ── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
 
     .categories {
       display: flex;
       gap: 10px;
       flex-wrap: nowrap;
       overflow-x: auto;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       padding-bottom: 8px;
       -webkit-overflow-scrolling: touch;
       animation: fadeInDown 0.6s 0.2s ease both;
       scrollbar-width: none;
+      border-top: 1px solid #1a1a1a;
+      padding-top: 40px;
     }
 
     .categories::-webkit-scrollbar { display: none; }
@@ -227,7 +381,7 @@
       border-color: #e8e8e8;
     }
 
-    .products-section { margin-top: 40px; }
+    .products-section { margin-top: 0; }
 
     .featured-products {
       display: grid;
@@ -248,9 +402,7 @@
       opacity: 0;
     }
 
-    .product-card.visible {
-      animation: cardPop 0.45s ease forwards;
-    }
+    .product-card.visible { animation: cardPop 0.45s ease forwards; }
 
     .product-card:hover {
       transform: translateY(-6px);
@@ -276,7 +428,6 @@
       font-size: 14px;
       color: #444;
       overflow: hidden;
-      position: relative;
     }
 
     .product-image img {
@@ -297,20 +448,8 @@
       border-top: 1px solid #1a1a1a;
     }
 
-    .product-title {
-      font-size: 15px;
-      font-weight: 500;
-      color: #e8e8e8;
-      line-height: 1.4;
-    }
-
-    .product-price {
-      font-size: 14px;
-      color: #888;
-      font-weight: 500;
-      white-space: nowrap;
-      margin-left: 12px;
-    }
+    .product-title { font-size: 15px; font-weight: 500; color: #e8e8e8; line-height: 1.4; }
+    .product-price { font-size: 14px; color: #888; font-weight: 500; white-space: nowrap; margin-left: 12px; }
 
     .show-more-container {
       text-align: center;
@@ -329,14 +468,9 @@
       font-weight: 500;
       cursor: pointer;
       transition: all 0.25s ease;
-      letter-spacing: 0.01em;
     }
 
-    .show-more-btn:hover {
-      background: #e8e8e8;
-      color: #0a0a0a;
-      border-color: #e8e8e8;
-    }
+    .show-more-btn:hover { background: #e8e8e8; color: #0a0a0a; border-color: #e8e8e8; }
 
     .show-more-container h6 {
       margin-top: 4px;
@@ -346,10 +480,7 @@
       letter-spacing: 0.03em;
     }
 
-    .tagline-logo {
-      margin-bottom: 4px;
-      opacity: 1;
-    }
+    .tagline-logo { margin-bottom: 4px; opacity: 1; }
 
     footer {
       margin-top: 80px;
@@ -363,12 +494,7 @@
 
     .footer-left { font-size: 13px; color: #444; }
 
-    .footer-brand-link {
-      color: #666;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    .footer-brand-link { color: #666; text-decoration: none; transition: color 0.2s; }
     .footer-brand-link:hover { color: #e8e8e8; }
 
     .footer-right { display: flex; gap: 20px; }
@@ -385,11 +511,7 @@
     }
 
     .social-link:hover { opacity: 0.7; }
-
-    .social-svg {
-      width: 20px;
-      height: 20px;
-    }
+    .social-svg { width: 20px; height: 20px; }
 
     .empty-msg {
       text-align: center;
@@ -399,13 +521,23 @@
       font-size: 15px;
     }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px 40px; }
+      .hero-right { order: -1; height: 360px; }
       .featured-products { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 640px) {
-      .container { padding: 40px 16px; }
-      .search-form { max-width: 100%; }
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: flex; }
+      .hero { padding: 32px 16px 32px; gap: 28px; }
+      .hero-title { font-size: 32px; }
+      .hero-right { height: 300px; }
+      .video-grid { gap: 5px; }
+      .video-col { gap: 5px; }
+      .video-cell { border-radius: 7px; }
+      .container { padding: 0 16px 40px; }
       #searchInput { font-size: 16px; }
       .categories { gap: 8px; }
       .category-btn { padding: 8px 16px; font-size: 13px; }
@@ -419,8 +551,45 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
+
+  <!-- NAV BAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="https://merajuk.com" class="nav-logo" aria-label="Merajuk Home">
+        <svg width="90" height="20" viewBox="0 0 364 81" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M123.252 23.8487C131.017 23.8487 136.104 29.8732 136.104 38.3745V61H123.654V39.9141C123.654 36.0986 122.315 34.2912 119.637 34.2912C116.223 34.2912 114.483 36.6341 114.483 41.186V61H102.367V39.9141C102.367 36.2325 100.961 34.2912 98.3507 34.2912C95.0037 34.2912 93.1294 36.701 93.1294 41.186V61H80.6787V24.8528H89.4478L91.1882 28.8022C93.7988 25.723 97.6144 23.8487 101.765 23.8487C106.183 23.8487 109.864 25.7899 112.14 29.1369C114.751 25.8569 118.767 23.8487 123.252 23.8487ZM180.783 42.5917C180.783 43.7297 180.716 44.8007 180.582 45.9387H153.74C154.543 50.0889 157.154 52.231 161.103 52.231C163.982 52.231 166.458 50.9591 167.596 48.8171H180.047C177.503 57.0506 170.14 62.2049 161.103 62.2049C149.79 62.2049 141.49 53.9714 141.49 42.9264C141.49 31.8814 149.723 23.7148 161.103 23.7148C172.751 23.7148 180.783 32.0153 180.783 42.5917ZM161.103 33.488C157.488 33.488 154.945 35.4292 153.941 39.0439H168.533C167.462 35.4292 164.852 33.488 161.103 33.488ZM206.664 24.7189H210.011V36.0986H205.124C200.773 36.0986 198.899 38.0398 198.899 42.6586V61H186.448V24.8528H194.815L196.757 28.8692C199.3 25.9238 202.38 24.7189 206.664 24.7189ZM243.285 24.8528H252.59V61H242.95L241.879 58.4563C238.934 60.8661 235.186 62.2049 230.968 62.2049C219.923 62.2049 212.025 54.1722 212.025 42.9264C212.025 31.7475 219.923 23.7818 230.968 23.7818C235.252 23.7818 239.068 25.1875 242.013 27.6642L243.285 24.8528ZM232.642 51.2269C237.328 51.2269 240.741 47.6791 240.741 42.9264C240.741 38.2407 237.328 34.7598 232.642 34.7598C227.956 34.7598 224.542 38.2407 224.542 42.9264C224.542 47.6791 227.956 51.2269 232.642 51.2269ZM261.317 20.3679V9.79146H273.634V20.3679H261.317ZM253.686 74.7895V63.8114H256.766C259.711 63.8114 261.251 62.138 261.251 59.0588V24.8528H273.701V60.0629C273.701 69.3005 268.011 74.7895 258.372 74.7895H253.686ZM298.899 62.2049C288.256 62.2049 281.093 55.6449 281.093 45.537V24.8528H293.544V45.0015C293.544 48.8171 295.619 51.026 298.899 51.026C302.246 51.026 304.254 48.7501 304.254 45.0015V24.8528H316.705V45.537C316.705 55.6449 309.609 62.2049 298.899 62.2049ZM360.802 61H346.076L337.039 45.7378V61H324.588V11.7996H337.039V39.0439L345.674 24.8528H359.664L348.352 42.1231L360.802 61Z" fill="white"/><path d="M19.6489 56.9828C18.8776 58.3103 18.7363 58.6314 18.5519 58.9172C17.647 60.3276 16.8265 61.9301 15.7449 63.2099C14.0902 65.1657 11.0712 66.0138 8.58989 65.7019C5.93038 65.367 3.4875 63.8168 1.89733 61.6827C-0.0201009 59.1077 -0.726845 55.322 0.92325 52.4397C1.95878 50.6314 3.01429 48.8338 4.06058 47.0316C4.28951 46.6367 4.54762 46.1942 4.81649 45.7348L5.80901 44.0371C6.33138 43.209 6.9905 43.5025 7.51288 44.1723C8.55609 45.3692 8.83265 45.6949 9.93885 46.735C10.6533 47.4741 10.4781 47.557 10.0264 48.2807L9.40419 49.2532L6.34675 54.2235C3.79171 58.3579 9.9112 62.1405 12.4662 58.0061L15.1104 53.6074C15.6128 52.7101 16.1797 51.8789 16.8911 52.4781L19.4092 54.795C20.5216 55.6339 19.927 56.3329 19.6489 56.9828Z" fill="white"/><path d="M58.5413 46.4281C57.9805 47.2408 57.8023 47.5189 58.3385 48.2917L58.8025 49.0231L62.3669 54.0563C65.1478 57.9665 59.3879 62.104 56.607 58.1939L39.6221 32.8417C39.0628 32.0735 38.5051 30.8106 37.6263 32.0735L35.5475 34.8375C34.6733 36.2341 34.9806 36.2817 35.7426 37.3556C38.9276 42.0186 49.7976 58.2737 50.698 59.4983C51.6782 60.8303 52.5893 62.3575 53.7354 63.5482C55.4885 65.3704 58.5075 66.0065 60.9227 65.5348C63.5116 65.0293 65.8085 63.3377 67.2297 61.1268C68.9443 58.4597 69.3868 54.677 67.5784 51.9407C66.443 50.2245 65.2876 48.5207 64.143 46.8107L62.6066 44.6812C61.8707 43.618 61.4513 43.0234 60.3404 44.3278C60.3404 44.3278 58.8563 45.9733 58.5413 46.4281Z" fill="white"/><path d="M31.8465 22.0708L30.8447 23.3568L29.4896 24.9485C28.4879 26.0762 28.3266 25.3787 26.5105 24.4876C26.4752 24.4753 26.4383 24.4615 26.403 24.4492C16.9234 21.1444 9.10004 35.0458 16.799 41.219L32.5317 54.9345L33.5534 55.824L34.3846 55.0605L39.5346 50.3314C39.9402 49.955 40.7668 49.4418 41.4951 50.2531L43.8488 53.3873C44.4726 54.0879 44.554 54.8116 43.6399 55.5106L35.3433 62.7686C33.8038 63.8425 32.7652 64.0223 31.1904 62.7686L13.2253 46.4028C11.3908 44.8833 9.81754 43.0335 8.75282 40.8964C7.25022 37.8789 6.87226 34.422 7.58208 31.1341C8.275 27.9261 9.93892 24.9485 12.2251 22.6024C14.5128 20.2548 17.4581 18.5233 20.683 17.8611C23.8541 17.2097 27.6936 17.5584 30.6527 19.3468C30.8524 19.4682 31.6298 20.009 31.6298 20.009C32.5686 20.7956 32.4964 21.2381 31.8465 22.0708Z" fill="white"/><path d="M53.6496 47.672C56.3813 45.4489 58.7597 43.3071 60.2838 40.0361C61.2917 37.8729 61.8156 35.112 61.519 32.7444C60.9613 28.2934 58.7535 24.3756 55.4103 21.4979C52.1086 18.6556 47.7391 17.05 43.3695 17.6753C36.7292 18.6279 32.7699 23.9562 29.3622 29.1692C27.2988 32.3249 24.6562 36.358 22.4591 39.7166C21.9168 40.5785 21.9659 41.1101 22.6158 41.7461L24.8405 43.6528C26.2064 44.7298 26.9515 43.5038 27.3326 42.9906L27.815 42.3146C30.7818 37.5917 33.9268 33.4434 37.2823 28.6867C39.3472 25.7599 41.7978 23.7011 45.5912 23.8732C48.7946 24.0176 51.2036 25.7599 52.9997 28.1275C54.7282 30.4075 55.163 33.5003 54.997 35.7772C54.8096 38.3553 53.3008 39.7965 51.5063 41.7385C51.199 42.0719 50.8103 42.3976 50.4477 42.6757C49.6012 43.364 49.3738 43.5545 50.2757 44.8865L51.9811 47.4063C52.7815 48.4648 53.2471 47.8871 53.6496 47.672Z" fill="white"/></svg>
+      </a>
+      <nav class="nav-links" aria-label="Kategori">
+        <a href="#products" class="nav-link" onclick="filterCategoryNav('all')">Semua</a>
+        <a href="#products" class="nav-link" onclick="filterCategoryNav('tech')">Teknologi</a>
+        <a href="#products" class="nav-link" onclick="filterCategoryNav('home')">Rumah</a>
+        <a href="#products" class="nav-link" onclick="filterCategoryNav('wear')">Pakaian</a>
+        <a href="#products" class="nav-link" onclick="filterCategoryNav('work')">Kerja</a>
+        <a href="#products" class="nav-link" onclick="filterCategoryNav('lifestyle')">Gaya Hidup</a>
+      </nav>
+      <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="mobileMenu">
+      <a href="#products" class="nav-mobile-link" onclick="filterCategoryNav('all'); closeMobileMenu()">Semua</a>
+      <a href="#products" class="nav-mobile-link" onclick="filterCategoryNav('tech'); closeMobileMenu()">Teknologi</a>
+      <a href="#products" class="nav-mobile-link" onclick="filterCategoryNav('home'); closeMobileMenu()">Rumah</a>
+      <a href="#products" class="nav-mobile-link" onclick="filterCategoryNav('wear'); closeMobileMenu()">Pakaian</a>
+      <a href="#products" class="nav-mobile-link" onclick="filterCategoryNav('work'); closeMobileMenu()">Kerja</a>
+      <a href="#products" class="nav-mobile-link" onclick="filterCategoryNav('lifestyle'); closeMobileMenu()">Gaya Hidup</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">
+        <svg width="14" height="10" viewBox="0 0 66 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.7714 37.6804C18.0346 38.9486 17.8996 39.2554 17.7234 39.5284C16.8589 40.8758 16.0751 42.4067 15.0418 43.6294C13.461 45.4979 10.5768 46.3081 8.20632 46.0101C5.66559 45.6901 3.33181 44.2091 1.81265 42.1704C-0.0191421 39.7104 -0.694322 36.0938 0.882078 33.3402C1.87136 31.6126 2.87973 29.8953 3.87929 28.1736C4.09799 27.7964 4.34458 27.3737 4.60144 26.9348L5.54963 25.3129C6.04868 24.5218 6.67836 24.8021 7.1774 25.4421C8.17403 26.5855 8.43823 26.8966 9.49504 27.8903C10.1776 28.5963 10.0102 28.6756 9.5787 29.3669L8.98425 30.296L6.06336 35.0443C3.62243 38.9941 9.46861 42.6078 11.9095 38.658L14.4356 34.4557C14.9156 33.5985 15.4572 32.8045 16.1368 33.3769L18.5425 35.5903C19.6051 36.3917 19.0371 37.0596 18.7714 37.6804Z" fill="white"/><path d="M55.927 27.596C55.3913 28.3725 55.221 28.6382 55.7333 29.3765L56.1766 30.0751L59.5818 34.8836C62.2385 38.6191 56.7358 42.5719 54.0791 38.8363L37.8527 14.6164C37.3185 13.8825 36.7857 12.676 35.9461 13.8825L33.9602 16.5231C33.125 17.8573 33.4186 17.9028 34.1466 18.9288C37.1893 23.3835 47.5739 38.9127 48.434 40.0825C49.3704 41.3551 50.2408 42.814 51.3358 43.9516C53.0106 45.6924 55.8947 46.3 58.2021 45.8494C60.6753 45.3665 62.8697 43.7505 64.2274 41.6383C65.8654 39.0903 66.2881 35.4766 64.5605 32.8625C63.4759 31.2229 62.3721 29.5952 61.2786 27.9615L59.8108 25.9272C59.1077 24.9115 58.707 24.3434 57.6458 25.5896C57.6458 25.5896 56.2279 27.1616 55.927 27.596Z" fill="white"/><path d="M30.4246 4.32749L29.4676 5.55603L28.1731 7.07665C27.2161 8.154 27.062 7.48763 25.327 6.63631C25.2933 6.62457 25.258 6.61136 25.2243 6.59962C16.1681 3.44241 8.6941 16.7229 16.0492 22.6205L31.0793 35.7234L32.0554 36.5732L32.8494 35.8437L37.7694 31.3259C38.1569 30.9663 38.9466 30.4761 39.6423 31.251L41.891 34.2453C42.4869 34.9146 42.5647 35.606 41.6914 36.2738L33.7653 43.2076C32.2946 44.2336 31.3024 44.4053 29.7979 43.2076L12.6351 27.5728C10.8826 26.1211 9.37956 24.3539 8.36238 22.3122C6.92689 19.4295 6.56581 16.127 7.24393 12.9859C7.9059 9.92121 9.49551 7.07665 11.6796 4.83534C13.8651 2.59257 16.6788 0.938374 19.7597 0.305759C22.7892 -0.316581 26.4572 0.016608 29.2842 1.72511C29.475 1.84106 30.2177 2.35772 30.2177 2.35772C31.1145 3.10923 31.0455 3.53195 30.4246 4.32749Z" fill="white"/><path d="M51.2537 28.7853C53.8634 26.6615 56.1355 24.6154 57.5915 21.4905C58.5544 19.4238 59.0549 16.7862 58.7716 14.5244C58.2388 10.2722 56.1296 6.52934 52.9357 3.78018C49.7815 1.06478 45.6071 -0.469056 41.4327 0.128332C35.0889 1.03836 31.3065 6.12863 28.0509 11.1088C26.0797 14.1237 23.5551 17.9766 21.4562 21.1852C20.938 22.0086 20.985 22.5164 21.6059 23.1241L23.7312 24.9456C25.0361 25.9745 25.748 24.8032 26.112 24.313L26.5729 23.6672C29.4071 19.1552 32.4117 15.1922 35.6173 10.6479C37.59 7.85181 39.9312 5.88498 43.5551 6.04937C46.6155 6.18734 48.9169 7.85181 50.6328 10.1137C52.284 12.2919 52.6994 15.2465 52.5409 17.4218C52.3618 19.8847 50.9205 21.2615 49.2061 23.1168C48.9125 23.4353 48.5412 23.7464 48.1948 24.0121C47.386 24.6697 47.1688 24.8517 48.0304 26.1243L49.6596 28.5314C50.4244 29.5427 50.8691 28.9908 51.2537 28.7853Z" fill="white"/></svg>
+        Koleksi Produk Pilihan Merajuk
+      </p>
+      <h1 class="hero-title">Hadiah Khas<br>Untuk Yang<br><span class="hero-accent">Tengah Merajuk.</span></h1>
+      <p class="hero-sub">30 produk pilihan yang digunakan, dipercayai dan benar-benar berbaloi.</p>
+
       <div class="search-form">
         <i class="fas fa-search search-icon"></i>
         <input type="text" id="searchInput" placeholder="" oninput="handleSearch()">
@@ -430,10 +599,6 @@
       </div>
 
       <div class="sub-bar">
-        <span class="sub-bar-left">
-          <svg width="18" height="13" viewBox="0 0 66 47" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><path d="M18.7714 37.6804C18.0346 38.9486 17.8996 39.2554 17.7234 39.5284C16.8589 40.8758 16.0751 42.4067 15.0418 43.6294C13.461 45.4979 10.5768 46.3081 8.20632 46.0101C5.66559 45.6901 3.33181 44.2091 1.81265 42.1704C-0.0191421 39.7104 -0.694322 36.0938 0.882078 33.3402C1.87136 31.6126 2.87973 29.8953 3.87929 28.1736C4.09799 27.7964 4.34458 27.3737 4.60144 26.9348L5.54963 25.3129C6.04868 24.5218 6.67836 24.8021 7.1774 25.4421C8.17403 26.5855 8.43823 26.8966 9.49504 27.8903C10.1776 28.5963 10.0102 28.6756 9.5787 29.3669L8.98425 30.296L6.06336 35.0443C3.62243 38.9941 9.46861 42.6078 11.9095 38.658L14.4356 34.4557C14.9156 33.5985 15.4572 32.8045 16.1368 33.3769L18.5425 35.5903C19.6051 36.3917 19.0371 37.0596 18.7714 37.6804Z" fill="white"/><path d="M55.927 27.596C55.3913 28.3725 55.221 28.6382 55.7333 29.3765L56.1766 30.0751L59.5818 34.8836C62.2385 38.6191 56.7358 42.5719 54.0791 38.8363L37.8527 14.6164C37.3185 13.8825 36.7857 12.676 35.9461 13.8825L33.9602 16.5231C33.125 17.8573 33.4186 17.9028 34.1466 18.9288C37.1893 23.3835 47.5739 38.9127 48.434 40.0825C49.3704 41.3551 50.2408 42.814 51.3358 43.9516C53.0106 45.6924 55.8947 46.3 58.2021 45.8494C60.6753 45.3665 62.8697 43.7505 64.2274 41.6383C65.8654 39.0903 66.2881 35.4766 64.5605 32.8625C63.4759 31.2229 62.3721 29.5952 61.2786 27.9615L59.8108 25.9272C59.1077 24.9115 58.707 24.3434 57.6458 25.5896C57.6458 25.5896 56.2279 27.1616 55.927 27.596Z" fill="white"/><path d="M30.4246 4.32749L29.4676 5.55603L28.1731 7.07665C27.2161 8.154 27.062 7.48763 25.327 6.63631C25.2933 6.62457 25.258 6.61136 25.2243 6.59962C16.1681 3.44241 8.6941 16.7229 16.0492 22.6205L31.0793 35.7234L32.0554 36.5732L32.8494 35.8437L37.7694 31.3259C38.1569 30.9663 38.9466 30.4761 39.6423 31.251L41.891 34.2453C42.4869 34.9146 42.5647 35.606 41.6914 36.2738L33.7653 43.2076C32.2946 44.2336 31.3024 44.4053 29.7979 43.2076L12.6351 27.5728C10.8826 26.1211 9.37956 24.3539 8.36238 22.3122C6.92689 19.4295 6.56581 16.127 7.24393 12.9859C7.9059 9.92121 9.49551 7.07665 11.6796 4.83534C13.8651 2.59257 16.6788 0.938374 19.7597 0.305759C22.7892 -0.316581 26.4572 0.016608 29.2842 1.72511C29.475 1.84106 30.2177 2.35772 30.2177 2.35772C31.1145 3.10923 31.0455 3.53195 30.4246 4.32749Z" fill="white"/><path d="M51.2537 28.7853C53.8634 26.6615 56.1355 24.6154 57.5915 21.4905C58.5544 19.4238 59.0549 16.7862 58.7716 14.5244C58.2388 10.2722 56.1296 6.52934 52.9357 3.78018C49.7815 1.06478 45.6071 -0.469056 41.4327 0.128332C35.0889 1.03836 31.3065 6.12863 28.0509 11.1088C26.0797 14.1237 23.5551 17.9766 21.4562 21.1852C20.938 22.0086 20.985 22.5164 21.6059 23.1241L23.7312 24.9456C25.0361 25.9745 25.748 24.8032 26.112 24.313L26.5729 23.6672C29.4071 19.1552 32.4117 15.1922 35.6173 10.6479C37.59 7.85181 39.9312 5.88498 43.5551 6.04937C46.6155 6.18734 48.9169 7.85181 50.6328 10.1137C52.284 12.2919 52.6994 15.2465 52.5409 17.4218C52.3618 19.8847 50.9205 21.2615 49.2061 23.1168C48.9125 23.4353 48.5412 23.7464 48.1948 24.0121C47.386 24.6697 47.1688 24.8517 48.0304 26.1243L49.6596 28.5314C50.4244 29.5427 50.8691 28.9908 51.2537 28.7853Z" fill="white"/></svg>
-          Koleksi Produk Pilihan Merajuk
-        </span>
         <span class="sub-bar-right">
           Tersedia di platform berikut:
           <a href="https://tiktok.com/@merajukHQ" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="sub-icon">
@@ -447,10 +612,43 @@
           </a>
         </span>
       </div>
+    </div>
 
+    <div class="hero-right">
+      <div class="video-grid" id="videoGrid">
+        <!-- Column 1: scrolls up. Replace placeholders with real TikTok embed iframes when links are ready -->
+        <div class="video-col">
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 1</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 2</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 3</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 1</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 2</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 3</span></div></div>
+        </div>
+        <!-- Column 2: scrolls down -->
+        <div class="video-col reverse">
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 4</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 5</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 6</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 4</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 5</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 6</span></div></div>
+        </div>
+        <!-- Column 3: scrolls up -->
+        <div class="video-col">
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 7</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 8</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 9</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 7</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 8</span></div></div>
+          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 9</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </header>
-
+  <!-- PRODUCTS SECTION -->
+  <div class="container" id="products">
     <div class="categories">
       <button class="category-btn active" onclick="filterCategory('all', this)">Semua</button>
       <button class="category-btn" onclick="filterCategory('tech', this)">Teknologi</button>
@@ -601,6 +799,21 @@
       searchQuery = '';
       currentlyShowing = isMobile() ? 10 : 9;
       renderProducts();
+    }
+
+    function filterCategoryNav(category) {
+      const btn = Array.from(document.querySelectorAll('.category-btn'))
+        .find(b => b.getAttribute('onclick').includes(`'${category}'`));
+      if (btn) filterCategory(category, btn);
+      document.getElementById('products').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
     }
 
     renderProducts();
