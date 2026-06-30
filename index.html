@@ -222,6 +222,30 @@
       line-height: 1.6;
     }
 
+    .hero-founder {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .founder-avatar {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .founder-name {
+      color: #999;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .founder-name:hover { color: #e8e8e8; }
+
     .hero-sub-accent {
       font-family: 'Instrument Serif', serif;
       font-style: italic;
@@ -650,7 +674,11 @@
         Koleksi Produk Pilihan Merajuk
       </p>
       <h1 class="hero-title">Hadiah Khas Untuk<br>Yang Tengah <span class="hero-accent">Merajuk.</span></h1>
-      <p class="hero-sub">Produk pilihan yang dipercayai dan benar-benar <span class="hero-sub-accent">function.</span></p>
+      <p class="hero-sub hero-founder">
+        Diasaskan oleh
+        <img src="images/fajar.webp" alt="Fajar Siddiq" class="founder-avatar">
+        <a href="https://fajarsiddiq.com" target="_blank" rel="noopener noreferrer" class="founder-name">Fajar Siddiq</a> — Dikuasakan oleh AI.
+      </p>
 
       <div class="search-form">
         <i class="fas fa-search search-icon"></i>
