@@ -941,6 +941,10 @@
       document.getElementById('mobileMenu').classList.remove('open');
     }
 
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 640) closeMobileMenu();
+    });
+
     renderProducts();
   </script>
 
