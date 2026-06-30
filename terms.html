@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Merajuk.com" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:locale" content="ms_MY" />
+  <meta property="og:site_name" content="Merajuk.com" />
+  <title>Terma Perkhidmatan | Merajuk.com</title>
+  <meta name="description" content="Terma Perkhidmatan rasmi Merajuk.com — peraturan penggunaan laman, pautan affiliate, pembelian Pujuk Box & Merajuk Box, dan kerjasama jenama." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://merajuk.com/terms.html" />
+  <meta property="og:title" content="Terma Perkhidmatan | Merajuk.com" />
+  <meta property="og:description" content="Terma Perkhidmatan rasmi Merajuk.com — peraturan penggunaan laman, pautan affiliate, pembelian Pujuk Box & Merajuk Box, dan kerjasama jenama." />
+  <link rel="canonical" href="https://merajuk.com/terms.html" />
+  <style>
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #e8e8e8;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: sticky;
+      top: 16px;
+      z-index: 100;
+      max-width: 1140px;
+      margin: 16px auto 0;
+      background: rgba(20,20,20,0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid #222;
+      border-radius: 999px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      animation: fadeInDown 0.5s ease both;
+      transition: border-radius 0.2s;
+    }
+
+    .navbar:has(.nav-mobile-menu.open) { border-radius: 28px; }
+
+    .navbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      color: #666;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover, .nav-link.active { color: #e8e8e8; background: #181818; }
+
+    .nav-mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #888;
+      font-size: 18px;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .nav-tiktok-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      padding: 8px 16px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+
+    .nav-tiktok-btn:hover { background: #232323; border-color: #3a3a3a; transform: translateY(-1px); }
+    .nav-tiktok-btn span { font-size: 12px; color: #999; white-space: nowrap; }
+    .nav-tiktok-btn svg { flex-shrink: 0; }
+
+    .nav-mobile-menu {
+      display: none;
+      flex-direction: column;
+      padding: 8px 16px 16px;
+      border-top: 1px solid #262626;
+      gap: 2px;
+      background: rgba(14,14,14,0.97);
+    }
+
+    .nav-mobile-menu.open {
+      display: flex;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+    }
+
+    .nav-mobile-link {
+      font-size: 15px;
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-mobile-link:hover { color: #fff; background: #1c1c1c; }
+
+    .nav-mobile-tiktok-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+      padding: 12px 16px;
+      background: #1e1e1e;
+      border: 1px solid #2e2e2e;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .nav-mobile-tiktok-btn:hover { background: #262626; border-color: #3a3a3a; }
+    .nav-mobile-tiktok-btn span { font-size: 14px; font-weight: 500; color: #fff; }
+
+    @media (max-width: 860px) {
+      .navbar { margin: 16px 16px 0; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 640px) {
+      .navbar-inner { padding: 0 16px; height: 56px; }
+      .nav-tiktok-btn span { display: none; }
+      .nav-mobile-toggle { display: block; }
+    }
+
+    .hero-accent {
+      color: #888;
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-weight: 400;
+      display: inline-block;
+    }
+
+    .section-icon { width: 26px; height: auto; color: #e8e8e8; flex-shrink: 0; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 24px 24px;
+      text-align: center;
+      animation: fadeInUp 0.6s ease both;
+    }
+
+    .page-eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .page-eyebrow a { color: #888; text-decoration: none; }
+    .page-eyebrow a:hover { color: #e8e8e8; }
+
+    .page-title {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .page-meta { font-size: 13px; color: #555; }
+
+    /* ── LEGAL CONTENT ── */
+    .legal-content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 24px 100px;
+      animation: fadeInUp 0.7s 0.1s ease both;
+    }
+
+    .legal-content h2 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #e8e8e8;
+      margin: 40px 0 14px;
+    }
+
+    .legal-content h2:first-child { margin-top: 0; }
+
+    .legal-content p {
+      font-size: 15px;
+      color: #999;
+      margin-bottom: 14px;
+    }
+
+    .legal-content ul {
+      list-style: none;
+      margin-bottom: 14px;
+    }
+
+    .legal-content ul li {
+      font-size: 15px;
+      color: #999;
+      padding-left: 22px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .legal-content ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #444;
+    }
+
+    .legal-content strong { color: #c4c4c4; font-weight: 600; }
+
+    .legal-content a.inline-link { color: #e8e8e8; text-decoration: underline; text-underline-offset: 3px; }
+    .legal-content a.inline-link:hover { color: #fff; }
+
+    .legal-divider { border: none; border-top: 1px solid #1c1c1c; margin: 40px 0; }
+
+    .legal-email-box {
+      margin-top: 32px;
+      padding: 20px 24px;
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .legal-email-box i { color: #888; font-size: 18px; }
+    .legal-email-box a { font-size: 15px; color: #e8e8e8; text-decoration: none; font-weight: 600; }
+    .legal-email-box a:hover { text-decoration: underline; }
+
+    /* ── CONTACT PAGE ── */
+    .contact-hero {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 64px 24px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      animation: fadeInUp 0.6s ease both;
+    }
+
+    .contact-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 24px;
+      padding: 40px;
+    }
+
+    .contact-logo { margin-bottom: 28px; }
+    .contact-logo svg { width: 150px; height: auto; }
+
+    .contact-tagline {
+      font-size: 15px;
+      color: #888;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .contact-email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      background: #e8e8e8;
+      color: #0a0a0a;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      transition: transform 0.2s ease;
+    }
+    .contact-email-btn:hover { transform: translateY(-2px); }
+
+    .contact-social-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 14px;
+    }
+
+    .contact-social-grid { display: flex; flex-direction: column; gap: 10px; }
+
+    .contact-social-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 16px;
+      background: #161616;
+      border: 1px solid #232323;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-social-item:hover { border-color: #3a3a3a; transform: translateX(2px); }
+
+    .contact-social-item .icon-wrap {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-social-item .icon-wrap svg { width: 100%; height: 100%; }
+
+    .contact-social-item .label { display: flex; flex-direction: column; gap: 2px; }
+    .contact-social-item .label .platform { font-size: 13px; color: #e8e8e8; font-weight: 600; }
+    .contact-social-item .label .handle { font-size: 12px; color: #666; }
+
+    .contact-right-art {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-right-art .section-icon { width: 220px; height: auto; color: #161616; }
+
+    @media (max-width: 768px) {
+      .contact-hero { grid-template-columns: 1fr; }
+      .contact-right-art { display: none; }
+    }
+
+    /* ── COLLAB / PRICING (reuses pricing-card pattern) ── */
+    .collab-section {
+      max-width: 1140px;
+      margin: 96px auto 0;
+      padding: 0 24px;
+      text-align: center;
+      animation: fadeInUp 0.6s ease both;
+    }
+
+    .collab-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .collab-sub { font-size: 15px; color: #555; margin-bottom: 48px; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+      text-align: left;
+    }
+
+    .pricing-card:hover { border-color: #333; transform: translateY(-4px); }
+    .pricing-card.featured { border-color: #e8e8e8; }
+
+    .pricing-icon-banner {
+      aspect-ratio: 16 / 9;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pricing-icon-banner i { font-size: 40px; color: #2a2a2a; }
+
+    .pricing-body { padding: 28px 28px 32px; display: flex; flex-direction: column; flex: 1; }
+
+    .pricing-badge {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: #1c1c1c;
+      border: 1px solid #2a2a2a;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 14px;
+    }
+
+    .pricing-card.featured .pricing-badge { background: #e8e8e8; color: #0a0a0a; border-color: #e8e8e8; }
+
+    .pricing-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #e8e8e8;
+      margin-bottom: 8px;
+    }
+
+    .pricing-desc { font-size: 14px; color: #888; line-height: 1.6; margin-bottom: 20px; }
+
+    .pricing-features-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .pricing-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #bbb; }
+    .pricing-features li i {
+      width: 18px; height: 18px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%; background: #1c1c1c; color: #e8e8e8; font-size: 9px;
+    }
+
+    .pricing-cta {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: transparent;
+      color: #e8e8e8;
+      border: 1px solid #2a2a2a;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .pricing-card.featured .pricing-cta { background: #e8e8e8; color: #0a0a0a; border-color: #e8e8e8; }
+    .pricing-cta:hover { transform: translateY(-2px); background: #e8e8e8; color: #0a0a0a; }
+
+    .collab-note { max-width: 560px; margin: 32px auto 0; font-size: 13px; color: #555; }
+    .collab-note a { color: #888; text-decoration: underline; text-underline-offset: 3px; }
+
+    @media (max-width: 768px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: 1200px;
+      margin: 100px auto 0;
+      padding: 28px 24px;
+      border-top: 1px solid #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #e8e8e8; }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-left { font-size: 13px; color: #444; }
+    .footer-brand-link { color: #666; text-decoration: none; }
+    .footer-brand-link:hover { color: #e8e8e8; }
+    .footer-right { display: flex; gap: 20px; }
+
+    .social-link { display: flex; align-items: center; transition: opacity 0.2s; }
+    .social-link:hover { opacity: 0.7; }
+    .social-svg { width: 20px; height: 20px; }
+
+    @media (max-width: 640px) {
+      .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
+      .footer-right { justify-content: center; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo" aria-label="Merajuk Home">
+        <svg width="120" height="27" viewBox="0 0 1383 308" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M534.811 232H485.179L471.435 129.429L424.095 232.509H409.587L362.501 129.683L348.757 232H298.871L325.85 53.8362H374.972L416.968 150.808L459.218 53.8362H508.086L534.811 232ZM696.58 162.007C696.58 166.334 696.325 170.406 695.816 174.733H593.754C596.808 190.513 606.734 198.658 621.751 198.658C632.695 198.658 642.112 193.822 646.439 185.677H693.78C684.108 216.983 656.111 236.581 621.751 236.581C578.737 236.581 547.177 205.275 547.177 163.28C547.177 121.284 578.483 90.2325 621.751 90.2325C666.037 90.2325 696.58 121.793 696.58 162.007ZM621.751 127.392C608.007 127.392 598.335 134.773 594.517 148.518H650.003C645.93 134.773 636.004 127.392 621.751 127.392ZM794.983 94.0503H807.709V137.319H789.129C772.586 137.319 765.459 144.7 765.459 162.262V232H718.118V94.5594H749.933L757.314 109.831C766.986 98.6317 778.694 94.0503 794.983 94.0503ZM934.227 94.5594H969.606V232H932.955L928.883 222.328C917.684 231.491 903.431 236.581 887.396 236.581C845.4 236.581 815.367 206.039 815.367 163.28C815.367 120.775 845.4 90.487 887.396 90.487C903.685 90.487 918.193 95.832 929.392 105.249L934.227 94.5594ZM893.759 194.84C911.575 194.84 924.556 181.351 924.556 163.28C924.556 145.463 911.575 132.228 893.759 132.228C875.942 132.228 862.962 145.463 862.962 163.28C862.962 181.351 875.942 194.84 893.759 194.84ZM1002.79 77.5065V37.2924H1049.62V77.5065H1002.79ZM973.776 284.431V242.69H985.483C996.682 242.69 1002.54 236.327 1002.54 224.619V94.5594H1049.88V228.437C1049.88 263.56 1028.24 284.431 991.592 284.431H973.776ZM1145.69 236.581C1105.22 236.581 1077.98 211.638 1077.98 173.206V94.5594H1125.32V171.17C1125.32 185.677 1133.21 194.077 1145.69 194.077C1158.41 194.077 1166.05 185.423 1166.05 171.17V94.5594H1213.39V173.206C1213.39 211.638 1186.41 236.581 1145.69 236.581ZM1381.06 232H1325.06L1290.7 173.97V232H1243.36V44.928H1290.7V148.518L1323.54 94.5594H1376.73L1333.72 160.225L1381.06 232Z" fill="white"/><path d="M74.71 216.663C71.7774 221.71 71.24 222.931 70.539 224.018C67.0982 229.381 63.9787 235.474 59.8661 240.34C53.5745 247.776 42.0954 251.001 32.6609 249.815C22.5488 248.542 13.2604 242.647 7.21411 234.533C-0.0764284 224.742 -2.76364 210.348 3.51043 199.389C7.44779 192.513 11.4611 185.678 15.4393 178.826C16.3098 177.324 17.2912 175.642 18.3135 173.895L22.0873 167.44C24.0735 164.291 26.5796 165.407 28.5658 167.954C32.5324 172.505 33.5839 173.743 37.79 177.698C40.5064 180.508 39.8404 180.824 38.123 183.575L35.757 187.273L24.1319 206.171C14.417 221.891 37.6848 236.274 47.3997 220.554L57.4534 203.829C59.3637 200.417 61.5193 197.257 64.224 199.535L73.7987 208.344C78.0282 211.534 75.7674 214.192 74.71 216.663Z" fill="white"/><path d="M222.588 176.53C220.456 179.62 219.779 180.677 221.817 183.616L223.582 186.397L237.135 205.534C247.708 220.402 225.807 236.134 215.234 221.266L150.653 124.871C148.526 121.95 146.406 117.148 143.064 121.95L135.16 132.459C131.836 137.77 133.005 137.951 135.902 142.034C148.012 159.764 189.343 221.57 192.766 226.226C196.493 231.291 199.957 237.097 204.315 241.625C210.981 248.553 222.46 250.972 231.643 249.178C241.487 247.256 250.22 240.824 255.624 232.418C262.143 222.277 263.826 207.894 256.95 197.49C252.633 190.965 248.24 184.486 243.888 177.984L238.046 169.888C235.248 165.845 233.653 163.584 229.429 168.544C229.429 168.544 223.786 174.801 222.588 176.53Z" fill="white"/><path d="M121.088 83.92L117.279 88.8096L112.127 94.8616C108.318 99.1495 107.704 96.4973 100.799 93.1091C100.665 93.0624 100.525 93.0098 100.391 92.9631C64.3467 80.3974 34.6004 133.254 63.8736 156.726L123.693 208.876L127.578 212.258L130.739 209.355L150.32 191.374C151.862 189.942 155.005 187.991 157.774 191.076L166.724 202.993C169.096 205.657 169.405 208.408 165.929 211.066L134.384 238.663C128.53 242.746 124.581 243.43 118.593 238.663L50.2856 176.436C43.3105 170.659 37.3285 163.625 33.2802 155.499C27.5669 144.026 26.1298 130.882 28.8287 118.381C31.4634 106.183 37.79 94.8616 46.4826 85.9412C55.181 77.015 66.3797 70.4313 78.6416 67.9135C90.699 65.4366 105.298 66.7627 116.549 73.5625C117.308 74.024 120.264 76.0803 120.264 76.0803C123.834 79.0713 123.559 80.7537 121.088 83.92Z" fill="white"/><path d="M203.989 181.262C214.376 172.809 223.419 164.665 229.214 152.228C233.046 144.003 235.038 133.505 233.91 124.503C231.79 107.579 223.395 92.6828 210.684 81.7412C198.13 70.9339 181.516 64.8292 164.902 67.2068C139.653 70.8287 124.599 91.088 111.642 110.909C103.797 122.908 93.7487 138.243 85.3949 151.013C83.3328 154.29 83.5197 156.311 85.9908 158.73L94.4497 165.98C99.643 170.075 102.476 165.413 103.925 163.462L105.759 160.891C117.04 142.934 128.998 127.161 141.756 109.075C149.608 97.9463 158.925 90.1183 173.349 90.7725C185.529 91.3217 194.689 97.9462 201.518 106.948C208.09 115.618 209.743 127.377 209.112 136.035C208.399 145.837 202.663 151.317 195.84 158.701C194.671 159.968 193.193 161.207 191.815 162.264C188.596 164.881 187.731 165.606 191.16 170.671L197.645 180.251C200.688 184.276 202.458 182.08 203.989 181.262Z" fill="white"/></svg>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi">
+        <a href="index.html#merajuk-products" class="nav-link">Products</a>
+        <a href="index.html#products" class="nav-link">Affiliate</a>
+        <a href="index.html#cerita" class="nav-link">Cerita</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <a href="https://tiktok.com/@merajukHQ" target="_blank" rel="noopener noreferrer" class="nav-tiktok-btn">
+        <span>Follow @MerajukHQ</span>
+        <svg width="58" height="14" viewBox="0 0 1851.6 449.4" xmlns="http://www.w3.org/2000/svg"><path style="fill:#25F4EE" d="M154.6,177.7v-18.3c-6.1-0.9-12.2-1.3-18.4-1.3C61.1,158.1,0,219.2,0,294.4c0,44.5,21.7,86.1,58.2,111.6 c-0.6-0.7-1.3-1.4-1.9-2.1c-21.5-24.1-33.9-55.9-33.9-90.7C22.1,239.5,81,179.2,154.6,177.7z"/><path style="fill:#25F4EE" d="M157.9,375.9c33.5,0,61.4-27.2,62.7-60.4l0.1-296.2l53.8,0.1l-0.1-0.7c-1.2-6.2-1.7-12.5-1.7-18.8h-74 l-0.2,296.7c-1.2,34.3-30,61.1-64.3,59.9c-9.3-0.3-18.5-2.8-26.7-7.1C118.7,365.1,137.1,375.9,157.9,375.9z"/><path style="fill:#25F4EE" d="M375.6,120.7V103c-19.9,0-39.4-5.8-56.1-16.7C333.9,102.8,353.4,115.9,375.6,120.7z"/><path style="fill:#FE2C55" d="M319.5,86.3c-16.3-18.7-25.3-42.7-25.3-67.5h-20.3C279,47,296.3,71.2,319.5,86.3z"/><path style="fill:#FE2C55" d="M136.3,231.6c-34.3,0-62.8,28.5-62.8,62.8c0,23.9,14.1,44.7,33.9,55.1c-20.2-27.7-14.1-66.4,13.5-86.6 c15.9-11.6,36.5-15,55.3-9v-75.6c-6.1-0.9-12.2-1.3-18.4-1.3c-1.1,0-2.1,0.1-3.2,0.1l-0.5,0.1l0,57.1 C148.3,232.3,142.3,231.5,136.3,231.6z"/><path style="fill:#FE2C55" d="M375.6,119.5l-0.4-0.1l-0.2,57c-36.9,0-72.9-11.7-102.9-33.3l-0.1,151.3c0.1,74.9-60.5,135.6-135.3,135.7 c-0.1,0-0.3,0-0.4,0c-29,0-56-8.6-78.1-24.2c25.7,27.7,61.8,43.5,99.7,43.5c75.1,0,136.3-61.1,136.3-136.3V162.7 c30,21.6,66,33.2,103,33.1v-74C389.9,121.8,382.7,121,375.6,119.5z"/><path style="fill:#FFFFFF" d="M272.6,294.4V143.9c30,21.6,66,33.2,103,33.1v-57.5c-21.8-4.7-41.5-16.3-56.1-33.2 c-23.7-15.4-40-39.8-45.2-67.5h-54.2L220,315.5c-1.2,34.3-30,61.1-64.3,59.9c-19.2-0.7-37.1-10.2-48.3-25.9 c-30.4-15.9-42.2-53.5-26.3-84c10.7-20.5,32-33.4,55.1-33.4c6.2,0,12.4,1,18.4,2.9v-58C81,178.8,21.6,239.2,21.6,313.3 c0,34.5,13.1,67.6,36.6,92.8c22.9,16.1,50.1,24.7,78.1,24.7C211.4,430.7,272.6,369.5,272.6,294.4z"/><path style="fill:#FFFFFF" d="M470.4,119.7h231.4l-21.2,66.2h-60v244.7h-74.8V185.9l-75.2,0.1L470.4,119.7z"/><path style="fill:#FFFFFF" d="M1080.7,119.7h236.7l-21.2,66.2h-65.2v244.7H1156V185.9l-75.2,0.1L1080.7,119.7z"/><polygon style="fill:#FFFFFF" points="715.9,218.6 790,218.6 790,430.6 716.3,430.6 "/><path style="fill:#FFFFFF" d="M819.5,118.9h74.1v144.8l73.4-72h88.4l-92.9,90l104,148.9h-81.6l-69.4-103.2l-22,21.3v81.9h-74.1L819.5,118.9z"/><path style="fill:#FFFFFF" d="M1604.5,118.9h74.1v144.8l73.4-72h88.4l-92.9,90l104,148.9h-81.6l-69.4-103.2l-22,21.3v81.9h-74.1 L1604.5,118.9z"/><ellipse transform="matrix(0.3827 -0.9239 0.9239 0.3827 319.6917 792.5724)" style="fill:#FFFFFF" cx="752.9" cy="157.1" rx="37.3" ry="37.3"/><path style="fill:#25F4EE" d="M1307.9,303.7c0-66.2,51-121.3,117-126.5c-3.3-0.2-7.8-0.4-11.1-0.4c-70.1,0-126.9,56.9-126.9,126.9 c0,70.1,56.8,126.8,126.9,126.9c3.3,0,7.8-0.2,11.1-0.4C1358.9,425,1308,369.9,1307.9,303.7z"/><path style="fill:#FE2C55" d="M1453.7,176.8c-3.4,0-7.9,0.2-11.2,0.4c69.8,5.5,122,66.6,116.5,136.4c-4.9,62.2-54.3,111.6-116.5,116.5 c3.3,0.3,7.8,0.4,11.2,0.4c70.1,0,126.9-56.9,126.9-126.9C1580.6,233.6,1523.8,176.8,1453.7,176.8z"/><path style="fill:#FFFFFF" d="M1433.7,176.8c-70.1,0-126.9,56.8-126.9,126.9s56.8,126.9,126.9,126.9s126.9-56.8,126.9-126.9c0,0,0,0,0,0 C1560.6,233.6,1503.7,176.8,1433.7,176.8z M1433.7,365.4c-34.1,0-61.7-27.6-61.7-61.7s27.6-61.7,61.7-61.7 c34.1,0,61.7,27.6,61.7,61.7C1495.4,337.8,1467.8,365.4,1433.7,365.4C1433.7,365.4,1433.7,365.4,1433.7,365.4z"/></svg>
+      </a>
+      <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="mobileMenu">
+      <a href="index.html#merajuk-products" class="nav-mobile-link">Products</a>
+      <a href="index.html#products" class="nav-mobile-link">Affiliate</a>
+      <a href="index.html#cerita" class="nav-mobile-link">Cerita</a>
+      <a href="contact.html" class="nav-mobile-link">Contact</a>
+      <a href="https://tiktok.com/@merajukHQ" target="_blank" rel="noopener noreferrer" class="nav-mobile-tiktok-btn">
+        <span>Follow @MerajukHQ</span>
+        <svg width="58" height="14" viewBox="0 0 1851.6 449.4" xmlns="http://www.w3.org/2000/svg"><path style="fill:#25F4EE" d="M154.6,177.7v-18.3c-6.1-0.9-12.2-1.3-18.4-1.3C61.1,158.1,0,219.2,0,294.4c0,44.5,21.7,86.1,58.2,111.6 c-0.6-0.7-1.3-1.4-1.9-2.1c-21.5-24.1-33.9-55.9-33.9-90.7C22.1,239.5,81,179.2,154.6,177.7z"/><path style="fill:#25F4EE" d="M157.9,375.9c33.5,0,61.4-27.2,62.7-60.4l0.1-296.2l53.8,0.1l-0.1-0.7c-1.2-6.2-1.7-12.5-1.7-18.8h-74 l-0.2,296.7c-1.2,34.3-30,61.1-64.3,59.9c-9.3-0.3-18.5-2.8-26.7-7.1C118.7,365.1,137.1,375.9,157.9,375.9z"/><path style="fill:#25F4EE" d="M375.6,120.7V103c-19.9,0-39.4-5.8-56.1-16.7C333.9,102.8,353.4,115.9,375.6,120.7z"/><path style="fill:#FE2C55" d="M319.5,86.3c-16.3-18.7-25.3-42.7-25.3-67.5h-20.3C279,47,296.3,71.2,319.5,86.3z"/><path style="fill:#FE2C55" d="M136.3,231.6c-34.3,0-62.8,28.5-62.8,62.8c0,23.9,14.1,44.7,33.9,55.1c-20.2-27.7-14.1-66.4,13.5-86.6 c15.9-11.6,36.5-15,55.3-9v-75.6c-6.1-0.9-12.2-1.3-18.4-1.3c-1.1,0-2.1,0.1-3.2,0.1l-0.5,0.1l0,57.1 C148.3,232.3,142.3,231.5,136.3,231.6z"/><path style="fill:#FE2C55" d="M375.6,119.5l-0.4-0.1l-0.2,57c-36.9,0-72.9-11.7-102.9-33.3l-0.1,151.3c0.1,74.9-60.5,135.6-135.3,135.7 c-0.1,0-0.3,0-0.4,0c-29,0-56-8.6-78.1-24.2c25.7,27.7,61.8,43.5,99.7,43.5c75.1,0,136.3-61.1,136.3-136.3V162.7 c30,21.6,66,33.2,103,33.1v-74C389.9,121.8,382.7,121,375.6,119.5z"/><path style="fill:#FFFFFF" d="M272.6,294.4V143.9c30,21.6,66,33.2,103,33.1v-57.5c-21.8-4.7-41.5-16.3-56.1-33.2 c-23.7-15.4-40-39.8-45.2-67.5h-54.2L220,315.5c-1.2,34.3-30,61.1-64.3,59.9c-19.2-0.7-37.1-10.2-48.3-25.9 c-30.4-15.9-42.2-53.5-26.3-84c10.7-20.5,32-33.4,55.1-33.4c6.2,0,12.4,1,18.4,2.9v-58C81,178.8,21.6,239.2,21.6,313.3 c0,34.5,13.1,67.6,36.6,92.8c22.9,16.1,50.1,24.7,78.1,24.7C211.4,430.7,272.6,369.5,272.6,294.4z"/><path style="fill:#FFFFFF" d="M470.4,119.7h231.4l-21.2,66.2h-60v244.7h-74.8V185.9l-75.2,0.1L470.4,119.7z"/><path style="fill:#FFFFFF" d="M1080.7,119.7h236.7l-21.2,66.2h-65.2v244.7H1156V185.9l-75.2,0.1L1080.7,119.7z"/><polygon style="fill:#FFFFFF" points="715.9,218.6 790,218.6 790,430.6 716.3,430.6 "/><path style="fill:#FFFFFF" d="M819.5,118.9h74.1v144.8l73.4-72h88.4l-92.9,90l104,148.9h-81.6l-69.4-103.2l-22,21.3v81.9h-74.1L819.5,118.9z"/><path style="fill:#FFFFFF" d="M1604.5,118.9h74.1v144.8l73.4-72h88.4l-92.9,90l104,148.9h-81.6l-69.4-103.2l-22,21.3v81.9h-74.1 L1604.5,118.9z"/><ellipse transform="matrix(0.3827 -0.9239 0.9239 0.3827 319.6917 792.5724)" style="fill:#FFFFFF" cx="752.9" cy="157.1" rx="37.3" ry="37.3"/><path style="fill:#25F4EE" d="M1307.9,303.7c0-66.2,51-121.3,117-126.5c-3.3-0.2-7.8-0.4-11.1-0.4c-70.1,0-126.9,56.9-126.9,126.9 c0,70.1,56.8,126.8,126.9,126.9c3.3,0,7.8-0.2,11.1-0.4C1358.9,425,1308,369.9,1307.9,303.7z"/><path style="fill:#FE2C55" d="M1453.7,176.8c-3.4,0-7.9,0.2-11.2,0.4c69.8,5.5,122,66.6,116.5,136.4c-4.9,62.2-54.3,111.6-116.5,116.5 c3.3,0.3,7.8,0.4,11.2,0.4c70.1,0,126.9-56.9,126.9-126.9C1580.6,233.6,1523.8,176.8,1453.7,176.8z"/><path style="fill:#FFFFFF" d="M1433.7,176.8c-70.1,0-126.9,56.8-126.9,126.9s56.8,126.9,126.9,126.9s126.9-56.8,126.9-126.9c0,0,0,0,0,0 C1560.6,233.6,1503.7,176.8,1433.7,176.8z M1433.7,365.4c-34.1,0-61.7-27.6-61.7-61.7s27.6-61.7,61.7-61.7 c34.1,0,61.7,27.6,61.7,61.7C1495.4,337.8,1467.8,365.4,1433.7,365.4C1433.7,365.4,1433.7,365.4,1433.7,365.4z"/></svg>
+      </a>
+    </div>
+  </nav>
+
+    <section class="page-hero">
+      <p class="page-eyebrow"><a href="index.html">Merajuk.com</a> &nbsp;/&nbsp; Legal</p>
+      <h1 class="page-title"><svg class="section-icon" viewBox="0 0 270 308" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M74.71 216.663C71.7774 221.71 71.24 222.931 70.539 224.018C67.0982 229.381 63.9787 235.474 59.8661 240.34C53.5745 247.776 42.0954 251.001 32.6609 249.815C22.5488 248.542 13.2604 242.647 7.21411 234.533C-0.0764284 224.742 -2.76364 210.348 3.51043 199.389C7.44779 192.513 11.4611 185.678 15.4393 178.826C16.3098 177.324 17.2912 175.642 18.3135 173.895L22.0873 167.44C24.0735 164.291 26.5796 165.407 28.5658 167.954C32.5324 172.505 33.5839 173.743 37.79 177.698C40.5064 180.508 39.8404 180.824 38.123 183.575L35.757 187.273L24.1319 206.171C14.417 221.891 37.6848 236.274 47.3997 220.554L57.4534 203.829C59.3637 200.417 61.5193 197.257 64.224 199.535L73.7987 208.344C78.0282 211.534 75.7674 214.192 74.71 216.663Z" fill="currentColor"/><path d="M222.588 176.53C220.456 179.62 219.779 180.677 221.817 183.616L223.582 186.397L237.135 205.534C247.708 220.402 225.807 236.134 215.234 221.266L150.653 124.871C148.526 121.95 146.406 117.148 143.064 121.95L135.16 132.459C131.836 137.77 133.005 137.951 135.902 142.034C148.012 159.764 189.343 221.57 192.766 226.226C196.493 231.291 199.957 237.097 204.315 241.625C210.981 248.553 222.46 250.972 231.643 249.178C241.487 247.256 250.22 240.824 255.624 232.418C262.143 222.277 263.826 207.894 256.95 197.49C252.633 190.965 248.24 184.486 243.888 177.984L238.046 169.888C235.248 165.845 233.653 163.584 229.429 168.544C229.429 168.544 223.786 174.801 222.588 176.53Z" fill="currentColor"/><path d="M121.088 83.92L117.279 88.8096L112.127 94.8616C108.318 99.1495 107.704 96.4973 100.799 93.1091C100.665 93.0624 100.525 93.0098 100.391 92.9631C64.3467 80.3974 34.6004 133.254 63.8736 156.726L123.693 208.876L127.578 212.258L130.739 209.355L150.32 191.374C151.862 189.942 155.005 187.991 157.774 191.076L166.724 202.993C169.096 205.657 169.405 208.408 165.929 211.066L134.384 238.663C128.53 242.746 124.581 243.43 118.593 238.663L50.2856 176.436C43.3105 170.659 37.3285 163.625 33.2802 155.499C27.5669 144.026 26.1298 130.882 28.8287 118.381C31.4634 106.183 37.79 94.8616 46.4826 85.9412C55.181 77.015 66.3797 70.4313 78.6416 67.9135C90.699 65.4366 105.298 66.7627 116.549 73.5625C117.308 74.024 120.264 76.0803 120.264 76.0803C123.834 79.0713 123.559 80.7537 121.088 83.92Z" fill="currentColor"/><path d="M203.989 181.262C214.376 172.809 223.419 164.665 229.214 152.228C233.046 144.003 235.038 133.505 233.91 124.503C231.79 107.579 223.395 92.6828 210.684 81.7412C198.13 70.9339 181.516 64.8292 164.902 67.2068C139.653 70.8287 124.599 91.088 111.642 110.909C103.797 122.908 93.7487 138.243 85.3949 151.013C83.3328 154.29 83.5197 156.311 85.9908 158.73L94.4497 165.98C99.643 170.075 102.476 165.413 103.925 163.462L105.759 160.891C117.04 142.934 128.998 127.161 141.756 109.075C149.608 97.9463 158.925 90.1183 173.349 90.7725C185.529 91.3217 194.689 97.9462 201.518 106.948C208.09 115.618 209.743 127.377 209.112 136.035C208.399 145.837 202.663 151.317 195.84 158.701C194.671 159.968 193.193 161.207 191.815 162.264C188.596 164.881 187.731 165.606 191.16 170.671L197.645 180.251C200.688 184.276 202.458 182.08 203.989 181.262Z" fill="currentColor"/></svg>Terma <span class="hero-accent">Perkhidmatan.</span></h1>
+      <p class="page-meta">Dikemaskini terakhir: 30 Jun 2026</p>
+    </section>
+
+    <section class="legal-content">
+      <h2>1. Pengenalan</h2>
+      <p>Terma Perkhidmatan ini ("Terma") mengawal penggunaan anda terhadap laman web Merajuk.com ("Laman", "kami", "Merajuk"). Dengan melayari atau menggunakan Laman ini, anda bersetuju untuk terikat dengan Terma ini. Jika anda tidak bersetuju, sila hentikan penggunaan Laman dengan serta-merta.</p>
+
+      <h2>2. Tentang Merajuk</h2>
+      <p>Merajuk.com mengongsikan koleksi produk pilihan — termasuk pautan affiliate ke platform seperti TikTok Shop, Shopee dan Amazon — serta menjual kotak hadiah <strong>Pujuk Box</strong> (sekali sahaja) dan <strong>Merajuk Box</strong> (langganan bulanan). Kami juga menerima kerjasama jenama melalui pengiklanan video dan pengiklanan ruang dalam kotak.</p>
+
+      <h2>3. Pautan Affiliate</h2>
+      <p>Sebahagian pautan produk di Laman ini adalah pautan affiliate. Ini bermakna kami mungkin memperoleh komisen kecil jika anda membuat pembelian melalui pautan tersebut, tanpa sebarang kos tambahan kepada anda. Harga, ketersediaan dan butiran produk yang dipaparkan adalah tertakluk kepada perubahan oleh peruncit pihak ketiga dan boleh berbeza pada bila-bila masa tanpa notis.</p>
+
+      <h2>4. Pesanan, Harga &amp; Pembayaran</h2>
+      <ul>
+        <li>Semua harga dipaparkan dalam Ringgit Malaysia (RM) melainkan dinyatakan sebaliknya.</li>
+        <li>Pembelian Pujuk Box dan Merajuk Box diproses melalui platform pihak ketiga seperti TikTok Shop; terma platform tersebut turut terpakai.</li>
+        <li>Langganan Merajuk Box akan diperbaharui secara automatik setiap bulan melainkan dibatalkan oleh pelanggan mengikut tatacara platform berkenaan.</li>
+        <li>Kandungan kotak (snek, baucar, swag, kad mesej) adalah berdasarkan tema bulanan dan boleh berbeza mengikut ketersediaan stok.</li>
+      </ul>
+
+      <h2>5. Hak Harta Intelek</h2>
+      <p>Semua kandungan di Laman ini — termasuk logo, reka bentuk, teks dan grafik Merajuk — adalah hak milik Merajuk.com atau pemberi lesennya dan dilindungi undang-undang hak cipta dan harta intelek Malaysia. Anda tidak dibenarkan menyalin, mengedar atau mengubahsuai kandungan ini tanpa kebenaran bertulis.</p>
+
+      <h2>6. Kerjasama &amp; Pengiklanan</h2>
+      <p>Jenama yang berminat untuk bekerjasama melalui pengiklanan video atau pengiklanan dalam kotak Pujuk/Merajuk boleh menghubungi kami di <a href="mailto:info@merajuk.com" class="inline-link">info@merajuk.com</a>. Sebarang kerjasama tertakluk kepada perjanjian berasingan antara kedua-dua pihak.</p>
+
+      <h2>7. Had Liabiliti</h2>
+      <p>Merajuk.com disediakan "sebagaimana adanya". Kami tidak menjamin bahawa Laman akan bebas daripada ralat atau gangguan. Setakat yang dibenarkan oleh undang-undang, Merajuk.com tidak bertanggungjawab ke atas sebarang kerugian langsung atau tidak langsung yang timbul daripada penggunaan Laman atau produk pihak ketiga yang dipautkan.</p>
+
+      <h2>8. Pautan Pihak Ketiga</h2>
+      <p>Laman ini mengandungi pautan ke laman pihak ketiga (TikTok, Shopee, Amazon dan lain-lain). Kami tidak mengawal dan tidak bertanggungjawab ke atas kandungan, dasar privasi atau amalan laman pihak ketiga tersebut.</p>
+
+      <h2>9. Perubahan Terma</h2>
+      <p>Kami berhak mengemaskini Terma ini dari semasa ke semasa. Sebarang perubahan akan dipaparkan di halaman ini dengan tarikh kemaskini yang baharu. Penggunaan berterusan Laman selepas perubahan bermakna anda menerima Terma yang dikemaskini.</p>
+
+      <h2>10. Undang-Undang Terpakai</h2>
+      <p>Terma ini ditadbir oleh undang-undang Malaysia, tanpa mengira percanggahan prinsip undang-undang.</p>
+
+      <hr class="legal-divider">
+
+      <div class="legal-email-box">
+        <i class="fas fa-envelope"></i>
+        <span>Sebarang pertanyaan mengenai Terma ini, sila hubungi <a href="mailto:info@merajuk.com">info@merajuk.com</a></span>
+      </div>
+    </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-left">
+        &copy; <script>document.write(new Date().getFullYear());</script> Merajuk by <a href="https://euphorya.co/" target="_blank" rel="noopener noreferrer" class="footer-brand-link">Euphorya</a>
+      </div>
+      <div class="footer-right">
+        <a href="https://tiktok.com/@merajukHQ" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok @MerajukHQ"><svg class="social-svg" viewBox="0 0 346 392" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M134.652 154.464V138.819C129.33 138.05 124.008 137.729 118.686 137.665C53.2194 137.665 0 190.884 0 256.351C0 295.079 18.9153 331.371 50.6546 353.556C30.9057 332.333 19.1718 303.928 19.1718 272.701C19.0436 208.453 70.4035 155.939 134.652 154.464Z" fill="#25F4EE"/><path d="M137.409 327.331C166.583 327.331 190.756 303.735 191.846 274.817L192.103 16.7353H238.91L238.846 16.3505C237.82 10.9645 237.307 5.45018 237.307 0H172.867L172.739 258.467C171.713 288.347 146.642 311.686 116.826 310.66C108.683 310.404 100.732 308.288 93.4867 304.441C103.361 318.034 119.391 327.331 137.409 327.331Z" fill="#25F4EE"/><path d="M327.075 104.836V89.7036C309.699 89.7036 292.707 84.6382 278.216 75.1484C290.783 89.5754 307.775 100.668 327.075 104.836Z" fill="#25F4EE"/><path d="M278.216 75.1483C263.981 58.8619 256.159 37.9589 256.159 16.2864H238.59C243.142 40.9084 258.018 62.0038 278.216 75.1483Z" fill="#FE2C55"/><path d="M118.622 201.657C88.7418 201.657 64.0557 226.471 64.0557 256.351C64.0557 277.19 76.2384 295.272 93.4866 304.312C75.9819 280.075 81.4321 246.284 105.605 228.715C114.839 222.047 125.995 218.456 137.409 218.456C142.859 218.456 148.245 219.29 153.439 220.957V155.234C148.117 154.465 142.795 154.08 137.409 154.08C136.447 154.08 135.549 154.144 134.587 154.144H134.331L134.203 204.029C129.201 202.426 123.944 201.657 118.622 201.657Z" fill="#FE2C55"/><path d="M327.075 104.066L326.754 104.002V153.823C294.502 153.759 263.084 143.564 236.923 124.649V256.415C236.987 321.689 184.152 374.716 118.814 374.78C118.75 374.78 118.686 374.78 118.558 374.78C93.2303 374.78 69.8265 367.15 50.5265 353.62C72.9043 377.794 104.387 391.515 137.345 391.451C202.811 391.451 256.094 338.232 256.094 272.765V141.705C282.255 160.492 313.61 170.623 345.798 170.559V106.054C339.578 106.054 333.295 105.349 327.075 104.066Z" fill="#FE2C55"/><path d="M237.371 256.415V125.29C263.532 144.077 294.887 154.208 327.075 154.144V104.002C308.096 99.8987 290.911 89.7678 278.216 75.0844C257.633 61.6833 243.399 40.3956 238.846 16.2224H191.654L191.59 274.817C190.564 304.697 165.493 328.037 135.613 327.011C118.814 326.434 103.297 318.098 93.5508 304.441C67.0052 290.591 56.8101 257.826 70.66 231.28C80.0215 213.391 98.488 202.234 118.686 202.234C124.136 202.234 129.522 203.067 134.716 204.735V154.144C70.5318 155.619 18.7871 208.261 18.7871 272.766C18.7871 302.774 30.1363 331.692 50.6546 353.621C70.5959 367.663 94.3202 375.165 118.686 375.165C184.088 375.101 237.371 321.881 237.371 256.415Z" fill="white"/></svg></a>
+        <a href="https://shopee.com.my" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Shopee"><svg class="social-svg" viewBox="0 0 364 411" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M248.174 307.015C245.891 326.659 233.982 342.563 215.539 350.426C205.205 354.783 191.403 357.171 180.333 356.461C163.302 355.751 147.336 351.532 132.434 344.039C127.279 341.202 119.335 335.882 113.275 330.915C111.78 329.495 111.53 328.785 112.614 327.317C113.09 326.456 114.154 324.88 116.336 321.69C119.662 316.987 120.018 316.365 120.372 315.762C121.436 314.236 123.057 314.097 124.751 315.303C124.983 315.539 124.983 315.539 125.112 315.654C125.337 315.901 125.337 315.901 125.945 316.364C126.572 316.845 127.027 317.074 127.139 317.345C143.108 329.846 161.696 336.943 180.461 337.653C206.508 337.301 225.226 325.59 228.675 307.492C232.225 287.795 216.702 270.6 186.346 261.012C176.782 258.175 152.715 248.562 148.272 245.888C127.467 233.702 117.702 217.707 119.121 197.871C121.251 170.458 146.718 150.055 178.904 149.876C193.191 149.876 207.592 152.854 221.254 158.602C226.182 160.698 234.976 165.462 237.901 167.739C239.656 169.04 240.03 170.458 238.948 172.047C238.588 173.017 237.529 174.461 235.7 177.556C233.033 181.623 232.934 181.792 232.45 182.687C231.5 184.18 230.143 184.299 228.336 183.23C213.733 173.299 197.262 168.329 179.266 167.974C156.913 168.329 140.106 181.652 139.024 199.908C138.801 216.307 151.049 228.253 177.572 237.249C231.517 254.629 252.095 274.933 248.174 307.015ZM181.655 24.0227C216.704 24.0227 245.337 57.2778 246.755 98.9669H116.639C117.891 57.2778 146.608 24.0227 181.655 24.0227ZM363.312 106.865C363.312 102.515 359.944 98.9669 355.647 98.9669H355.366H271.254C269.126 43.9636 229.781 0 181.655 0C133.5 0 94.2576 43.9636 92.1587 98.9669H7.69363C3.45755 99.0631 0.0961714 102.533 0.0961714 106.865C0.0961714 107.115 0.0961714 107.225 0.0961714 107.476H0L11.9969 372.781C11.9969 373.498 12.1373 374.222 12.1373 375.084C12.1373 375.252 12.1602 375.304 12.1602 375.62V376.026L12.2487 376.166C14.0546 394.663 27.4177 409.409 45.6809 410.131V410.272H313.598C313.738 410.272 313.821 410.272 313.96 410.272C314.167 410.272 314.167 410.272 314.32 410.272H314.875V410.131C333.398 409.681 348.564 394.663 350.01 375.963L350.091 375.62C350.091 375.444 350.091 375.254 350.091 375.084C350.091 374.544 350.231 374.2 350.231 373.639L363.312 107.225C363.312 107.128 363.312 106.977 363.312 106.865Z" fill="#EE4D2D"/></svg></a>
+        <a href="https://amazon.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Amazon"><svg class="social-svg" viewBox="0 0 427 440" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M374.404 362.106C192.847 448.512 80.171 376.219 8.04337 332.309C3.58014 329.542 -4.00579 332.956 2.57604 340.516C26.6054 369.652 105.354 439.879 208.145 439.879C311.006 439.879 372.199 383.753 379.854 373.962C387.457 364.254 382.087 358.899 374.402 362.106H374.404ZM425.394 333.947C420.518 327.598 395.747 326.414 380.158 328.329C364.544 330.189 341.108 339.731 343.146 345.461C344.191 347.607 346.326 346.644 357.052 345.68C367.807 344.607 397.937 340.804 404.215 349.011C410.522 357.275 394.605 396.642 391.698 402.991C388.889 409.34 392.771 410.977 398.047 406.749C403.25 402.522 412.67 391.575 418.992 376.084C425.27 360.509 429.1 338.781 425.394 333.947Z" fill="#FF9900"/><path fill-rule="evenodd" clip-rule="evenodd" d="M252.327 185.796C252.327 208.467 252.9 227.374 241.441 247.508C232.192 263.879 217.541 273.946 201.172 273.946C178.826 273.946 165.813 256.921 165.813 231.795C165.813 182.194 210.255 173.191 252.327 173.191V185.796ZM311.012 327.639C307.164 331.076 301.599 331.323 297.261 329.03C277.945 312.988 274.507 305.54 263.867 290.234C231.947 322.81 209.356 332.549 167.942 332.549C118.996 332.549 80.8542 302.347 80.8542 241.861C80.8542 194.636 106.474 162.469 142.894 146.755C174.489 132.839 218.605 130.384 252.327 126.539V119.008C252.327 105.175 253.39 88.8056 245.288 76.8565C238.166 66.1341 224.58 61.714 212.629 61.714C190.449 61.714 170.642 73.0903 165.813 96.6624C164.829 101.902 160.984 107.059 155.746 107.304L99.2696 101.248C94.5234 100.182 89.2856 96.3364 90.595 89.0506C103.609 20.6271 165.402 0 220.731 0C249.051 0 286.045 7.53073 308.391 28.9756C336.711 55.4116 334.009 90.6879 334.009 129.075V219.763C334.009 247.018 345.304 258.967 355.944 273.701C359.708 278.939 360.528 285.243 355.78 289.17C343.912 299.072 322.795 317.49 311.174 327.803L311.01 327.639" fill="white"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+  <script>
+    function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+    window.addEventListener('resize', () => { if (window.innerWidth > 860) document.getElementById('mobileMenu').classList.remove('open'); });
+  </script>
+
+</body>
+</html>
