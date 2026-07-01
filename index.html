@@ -507,7 +507,8 @@
 
     @media (max-width: 640px) {
       .categories { flex-wrap: wrap; }
-      .categories-right { order: -1; width: 100%; margin-bottom: 12px; text-align: left; }
+      .categories-right { order: -1; width: 100%; margin-bottom: 12px; text-align: center; }
+      .categories-label { justify-content: center; width: 100%; white-space: normal; flex-wrap: wrap; row-gap: 4px; font-size: clamp(24px, 7vw, 32px); }
       .categories-desc { white-space: normal; }
     }
 
@@ -1048,6 +1049,7 @@
     @media (max-width: 1024px) {
       .navbar { margin: 0 16px; }
       .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px 40px; }
+      .hero-title { font-size: clamp(32px, 6vw, 42px); }
       .hero-right { height: 360px; }
       .featured-products { grid-template-columns: repeat(2, 1fr); }
     }
@@ -1086,7 +1088,24 @@
       .product-title { font-size: 13px; }
       .product-price { font-size: 12px; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding-bottom: 72px; }
+      .footer-bottom-row { flex-direction: column; justify-content: center; gap: 16px; }
       .footer-right { justify-content: center; }
+      .tiktok-follow-btn { padding: 12px 20px; font-size: 13px; gap: 8px; white-space: nowrap; }
+      .tiktok-follow-btn i { font-size: 11px; }
+      .tiktok-follow-btn .fa-tiktok { font-size: 13px; }
+      .hero-title { font-size: 28px; }
+      .hero-eyebrow { margin-bottom: 18px; }
+      .hero-sub { margin-bottom: 24px; }
+      .hero-left { text-align: center; }
+      .hero-eyebrow { justify-content: center; }
+      .hero-founder { justify-content: center; }
+      .sub-bar { justify-content: center; }
+      .sub-bar-right { justify-content: center; }
+    }
+
+    @media (max-width: 380px) {
+      .tiktok-follow-btn { padding: 11px 16px; font-size: 12px; gap: 6px; }
+      .hero-title { font-size: 25px; }
     }
   </style>
 </head>
