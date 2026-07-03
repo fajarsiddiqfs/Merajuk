@@ -235,6 +235,9 @@
       margin-bottom: 24px;
     }
 
+    .eyebrow-line1, .eyebrow-line2 { display: inline; }
+    .eyebrow-dash { display: inline; }
+
     .hero-title {
       font-size: clamp(32px, 4vw, 56px);
       font-weight: 700;
@@ -1121,6 +1124,9 @@
       .hero-sub { margin-bottom: 24px; }
       .hero-left { text-align: center; }
       .hero-eyebrow { justify-content: center; }
+      .eyebrow-dash { display: none; }
+      .eyebrow-text { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+      .eyebrow-line1, .eyebrow-line2 { display: block; }
       .hero-founder { justify-content: center; }
       .sub-bar { justify-content: center; }
       .sub-bar-right { justify-content: center; }
@@ -1207,7 +1213,9 @@
         <a href="https://merajuk.com/accio" target="_blank" rel="noopener noreferrer" style="display:flex; flex-shrink:0;">
           <img src="images/accio.svg" alt="Accio Work" width="16" height="16" style="border-radius:4px;">
         </a>
-        Build with <a href="https://merajuk.com/accio" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:none;">Accio Work</a> — Enterprise-grade AI agent platform by <a href="https://seller.alibaba.com/pages/accio_work" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:none;">Alibaba</a>
+        <span class="eyebrow-text">
+          <span class="eyebrow-line1">Build with <a href="https://merajuk.com/accio" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:none;">Accio Work</a></span><span class="eyebrow-dash"> — </span><span class="eyebrow-line2">Enterprise-grade AI agent platform by <a href="https://seller.alibaba.com/pages/accio_work" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:none;">Alibaba</a></span>
+        </span>
       </p>
       <h1 class="hero-title">Hadiah Khas Untuk<br>Yang Tengah <span class="hero-accent">Merajuk.</span></h1>
       <p class="hero-sub hero-founder">
