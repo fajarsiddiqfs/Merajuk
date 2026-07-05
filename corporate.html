@@ -443,6 +443,7 @@
     }
 
     .video-placeholder i { font-size: 20px; color: #2a2a2a; }
+    .video-placeholder img { width: 100%; height: 100%; object-fit: cover; }
 
     /* ── CONTAINER (products section) ── */
     .container {
@@ -989,12 +990,17 @@
       width: 100%;
       height: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       background: linear-gradient(160deg, #1a1a1a, #0d0d0d);
       color: #2a2a2a;
       font-size: 28px;
     }
+
+    .tiktok-card-img span { font-size: 11px; color: #333; }
+    .tiktok-card-img img { width: 100%; height: 100%; object-fit: cover; }
 
     .tiktok-card-label {
       position: absolute;
@@ -1247,30 +1253,30 @@
       <div class="video-grid" id="videoGrid">
         <!-- Column 1: scrolls up. Replace placeholders with real TikTok embed iframes when links are ready -->
         <div class="video-col">
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 1</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 2</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 3</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 1</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 2</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 3</span></div></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video1.png" alt="Video 1" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video2.png" alt="Video 2" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video3.png" alt="Video 3" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video1.png" alt="Video 1" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video2.png" alt="Video 2" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video3.png" alt="Video 3" loading="lazy"></a></div>
         </div>
         <!-- Column 2: scrolls down -->
         <div class="video-col reverse">
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 4</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 5</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 6</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 4</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 5</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 6</span></div></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video4.png" alt="Video 4" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video5.png" alt="Video 5" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video6.png" alt="Video 6" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video4.png" alt="Video 4" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video5.png" alt="Video 5" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video6.png" alt="Video 6" loading="lazy"></a></div>
         </div>
         <!-- Column 3: scrolls up -->
         <div class="video-col">
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 7</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 8</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 9</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 7</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 8</span></div></div>
-          <div class="video-cell"><div class="video-placeholder"><i class="fa-brands fa-tiktok"></i><span>Video 9</span></div></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video7.png" alt="Video 7" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video8.png" alt="Video 8" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video9.png" alt="Video 9" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video7.png" alt="Video 7" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video8.png" alt="Video 8" loading="lazy"></a></div>
+          <div class="video-cell"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="video-placeholder"><img src="images/video9.png" alt="Video 9" loading="lazy"></a></div>
         </div>
       </div>
     </div>
@@ -1369,34 +1375,15 @@
         <p class="pricing-section-sub">Tonton video konten kami — di TikTok & Instagram.</p>
         <div class="tiktok-carousel-wrap">
           <div class="tiktok-carousel" id="tiktokCarousel">
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
-            <div class="tiktok-card"><div class="tiktok-card-img"><i class="fa-brands fa-tiktok"></i></div></div>
+            <div class="tiktok-card"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="tiktok-card-img"><img src="images/video1.png" alt="Video 1" loading="lazy"></a></div>
+            <div class="tiktok-card"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="tiktok-card-img"><img src="images/video2.png" alt="Video 2" loading="lazy"></a></div>
+            <div class="tiktok-card"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="tiktok-card-img"><img src="images/video3.png" alt="Video 3" loading="lazy"></a></div>
+            <div class="tiktok-card"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="tiktok-card-img"><img src="images/video4.png" alt="Video 4" loading="lazy"></a></div>
+            <div class="tiktok-card"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="tiktok-card-img"><img src="images/video5.png" alt="Video 5" loading="lazy"></a></div>
+            <div class="tiktok-card"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="tiktok-card-img"><img src="images/video6.png" alt="Video 6" loading="lazy"></a></div>
+            <div class="tiktok-card"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="tiktok-card-img"><img src="images/video7.png" alt="Video 7" loading="lazy"></a></div>
+            <div class="tiktok-card"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="tiktok-card-img"><img src="images/video8.png" alt="Video 8" loading="lazy"></a></div>
+            <div class="tiktok-card"><a href="https://tiktok.com/@merajukhq" target="_blank" rel="noopener noreferrer" class="tiktok-card-img"><img src="images/video9.png" alt="Video 9" loading="lazy"></a></div>
           </div>
         </div>
         <a href="contact.html" class="tiktok-follow-btn">
