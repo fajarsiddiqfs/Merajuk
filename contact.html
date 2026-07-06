@@ -632,11 +632,16 @@
     @media (max-width: 640px) {
       .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
       .footer-right { justify-content: center; }
+      .contact-actions { flex-wrap: nowrap; gap: 10px; }
+      .contact-email-btn, .contact-book-call-btn { flex: 1 1 0; padding: 12px 10px; font-size: 13px; justify-content: center; white-space: nowrap; }
+      .collab-title { flex-wrap: nowrap; align-items: flex-start; }
     }
 
     @media (max-width: 480px) {
       .contact-title { font-size: clamp(24px, 7vw, 32px); }
       .collab-title { font-size: clamp(22px, 7vw, 32px); }
+      .contact-email-btn, .contact-book-call-btn { padding: 10px 8px; font-size: 12px; gap: 6px; }
+      .contact-actions { gap: 8px; }
     }
 
   </style>
