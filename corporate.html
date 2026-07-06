@@ -235,6 +235,16 @@
       margin-bottom: 24px;
     }
 
+    .eyebrow-line1, .eyebrow-line2 { display: inline; }
+    .eyebrow-dash { display: inline; }
+    .eyebrow-icon-link {
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+      margin-right: 6px;
+      transform: translateY(-1px);
+    }
+
     .hero-title {
       font-size: clamp(32px, 4vw, 56px);
       font-weight: 700;
@@ -1139,6 +1149,11 @@
       .hero-sub { margin-bottom: 24px; }
       .hero-left { text-align: center; }
       .hero-eyebrow { justify-content: center; }
+      .eyebrow-dash { display: none; }
+      .eyebrow-text { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+      .eyebrow-line1 { display: block; text-align: center; }
+      .eyebrow-line2 { display: block; }
+      .eyebrow-icon-link { margin-right: 6px; transform: none; }
       .hero-founder { justify-content: center; }
       .sub-bar { justify-content: center; }
       .sub-bar-right { justify-content: center; }
@@ -1222,8 +1237,9 @@
   <section class="hero">
     <div class="hero-left">
       <p class="hero-eyebrow">
-        <svg width="14" height="10" viewBox="0 0 66 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.7714 37.6804C18.0346 38.9486 17.8996 39.2554 17.7234 39.5284C16.8589 40.8758 16.0751 42.4067 15.0418 43.6294C13.461 45.4979 10.5768 46.3081 8.20632 46.0101C5.66559 45.6901 3.33181 44.2091 1.81265 42.1704C-0.0191421 39.7104 -0.694322 36.0938 0.882078 33.3402C1.87136 31.6126 2.87973 29.8953 3.87929 28.1736C4.09799 27.7964 4.34458 27.3737 4.60144 26.9348L5.54963 25.3129C6.04868 24.5218 6.67836 24.8021 7.1774 25.4421C8.17403 26.5855 8.43823 26.8966 9.49504 27.8903C10.1776 28.5963 10.0102 28.6756 9.5787 29.3669L8.98425 30.296L6.06336 35.0443C3.62243 38.9941 9.46861 42.6078 11.9095 38.658L14.4356 34.4557C14.9156 33.5985 15.4572 32.8045 16.1368 33.3769L18.5425 35.5903C19.6051 36.3917 19.0371 37.0596 18.7714 37.6804Z" fill="white"/><path d="M55.927 27.596C55.3913 28.3725 55.221 28.6382 55.7333 29.3765L56.1766 30.0751L59.5818 34.8836C62.2385 38.6191 56.7358 42.5719 54.0791 38.8363L37.8527 14.6164C37.3185 13.8825 36.7857 12.676 35.9461 13.8825L33.9602 16.5231C33.125 17.8573 33.4186 17.9028 34.1466 18.9288C37.1893 23.3835 47.5739 38.9127 48.434 40.0825C49.3704 41.3551 50.2408 42.814 51.3358 43.9516C53.0106 45.6924 55.8947 46.3 58.2021 45.8494C60.6753 45.3665 62.8697 43.7505 64.2274 41.6383C65.8654 39.0903 66.2881 35.4766 64.5605 32.8625C63.4759 31.2229 62.3721 29.5952 61.2786 27.9615L59.8108 25.9272C59.1077 24.9115 58.707 24.3434 57.6458 25.5896C57.6458 25.5896 56.2279 27.1616 55.927 27.596Z" fill="white"/><path d="M30.4246 4.32749L29.4676 5.55603L28.1731 7.07665C27.2161 8.154 27.062 7.48763 25.327 6.63631C25.2933 6.62457 25.258 6.61136 25.2243 6.59962C16.1681 3.44241 8.6941 16.7229 16.0492 22.6205L31.0793 35.7234L32.0554 36.5732L32.8494 35.8437L37.7694 31.3259C38.1569 30.9663 38.9466 30.4761 39.6423 31.251L41.891 34.2453C42.4869 34.9146 42.5647 35.606 41.6914 36.2738L33.7653 43.2076C32.2946 44.2336 31.3024 44.4053 29.7979 43.2076L12.6351 27.5728C10.8826 26.1211 9.37956 24.3539 8.36238 22.3122C6.92689 19.4295 6.56581 16.127 7.24393 12.9859C7.9059 9.92121 9.49551 7.07665 11.6796 4.83534C13.8651 2.59257 16.6788 0.938374 19.7597 0.305759C22.7892 -0.316581 26.4572 0.016608 29.2842 1.72511C29.475 1.84106 30.2177 2.35772 30.2177 2.35772C31.1145 3.10923 31.0455 3.53195 30.4246 4.32749Z" fill="white"/><path d="M51.2537 28.7853C53.8634 26.6615 56.1355 24.6154 57.5915 21.4905C58.5544 19.4238 59.0549 16.7862 58.7716 14.5244C58.2388 10.2722 56.1296 6.52934 52.9357 3.78018C49.7815 1.06478 45.6071 -0.469056 41.4327 0.128332C35.0889 1.03836 31.3065 6.12863 28.0509 11.1088C26.0797 14.1237 23.5551 17.9766 21.4562 21.1852C20.938 22.0086 20.985 22.5164 21.6059 23.1241L23.7312 24.9456C25.0361 25.9745 25.748 24.8032 26.112 24.313L26.5729 23.6672C29.4071 19.1552 32.4117 15.1922 35.6173 10.6479C37.59 7.85181 39.9312 5.88498 43.5551 6.04937C46.6155 6.18734 48.9169 7.85181 50.6328 10.1137C52.284 12.2919 52.6994 15.2465 52.5409 17.4218C52.3618 19.8847 50.9205 21.2615 49.2061 23.1168C48.9125 23.4353 48.5412 23.7464 48.1948 24.0121C47.386 24.6697 47.1688 24.8517 48.0304 26.1243L49.6596 28.5314C50.4244 29.5427 50.8691 28.9908 51.2537 28.7853Z" fill="white"/></svg>
-        Gifts & Merch Untuk Korporat
+        <span class="eyebrow-text">
+          <span class="eyebrow-line1"><a href="https://merajuk.com/accio" target="_blank" rel="noopener noreferrer" class="eyebrow-icon-link"><img src="images/accio.svg" alt="Accio Work" width="16" height="16" style="border-radius:4px;"></a>Build with <a href="https://merajuk.com/accio" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:none;">Accio Work</a></span><span class="eyebrow-dash"> — </span><span class="eyebrow-line2">Enterprise-grade AI agent platform by <a href="https://seller.alibaba.com/pages/accio_work" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:none;">Alibaba</a></span>
+        </span>
       </p>
       <h1 class="hero-title">Hadiah & Merchandise<br>Untuk Rakan <span class="hero-accent">Korporat.</span></h1>
       <p class="hero-sub hero-founder">
