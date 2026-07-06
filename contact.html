@@ -193,7 +193,7 @@
     }
 
     .section-icon { width: 26px; height: auto; color: #e8e8e8; flex-shrink: 0; }
-    .page-title .section-icon, .collab-title .section-icon { width: 0.95em; height: auto; }
+    .page-title .section-icon, .collab-title .section-icon { width: 0.95em; height: auto; margin-right: 14px; }
 
     /* ── PAGE HERO ── */
     .page-hero {
@@ -342,16 +342,15 @@
 
     .contact-title {
       display: inline-flex;
-      align-items: center;
+      align-items: baseline;
       flex-wrap: wrap;
-      gap: 14px;
       font-size: clamp(28px, 4vw, 44px);
       font-weight: 700;
       letter-spacing: -0.03em;
       line-height: 1.15;
       margin-bottom: 28px;
     }
-    .contact-title .section-icon { width: 0.95em; height: auto; }
+    .contact-title .section-icon { width: 0.95em; height: auto; margin-right: 14px; align-self: center; }
     .contact-title .title-text { white-space: normal; }
 
     .contact-tagline {
@@ -462,10 +461,9 @@
 
     .collab-title {
       display: inline-flex;
-      align-items: center;
+      align-items: baseline;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px 14px;
       font-size: clamp(26px, 4vw, 44px);
       font-weight: 700;
       letter-spacing: -0.03em;
@@ -635,8 +633,8 @@
     }
 
     @media (max-width: 480px) {
-      .contact-title { font-size: clamp(24px, 7vw, 32px); gap: 10px; }
-      .collab-title { font-size: clamp(22px, 7vw, 32px); gap: 8px 10px; }
+      .contact-title { font-size: clamp(24px, 7vw, 32px); }
+      .collab-title { font-size: clamp(22px, 7vw, 32px); }
     }
 
   </style>
