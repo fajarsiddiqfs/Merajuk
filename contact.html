@@ -445,9 +445,10 @@
     .contact-social-item .label .handle { font-size: 12px; color: #666; }
 
     @media (max-width: 768px) {
-      .contact-card { flex-direction: column; }
-      .contact-icon-panel { flex: none; border-right: none; border-bottom: 1px solid #1c1c1c; padding: 32px; }
+      .contact-card { flex-direction: column; max-width: 420px; margin: 0 auto; }
+      .contact-icon-panel { flex: none; width: 100%; aspect-ratio: 1 / 1; border-right: none; border-bottom: 1px solid #1c1c1c; padding: 32px; }
       .contact-icon-panel .section-icon { width: 100px; }
+      .pricing-icon-banner { aspect-ratio: 1 / 1; }
     }
 
     /* ── COLLAB / PRICING (reuses pricing-card pattern) ── */
