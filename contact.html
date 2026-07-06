@@ -170,12 +170,11 @@
 
     @media (max-width: 860px) {
       .navbar { margin: 16px 16px 0; }
-      .nav-links { display: none; }
     }
     @media (max-width: 640px) {
       .navbar-inner { padding: 0 16px; height: 56px; }
-      .nav-social-label { display: none; }
-      .nav-social { padding: 8px 12px; gap: 10px; }
+      .nav-links { display: none; }
+      .nav-social { display: none; }
       .nav-mobile-toggle { display: block; }
     }
 
@@ -842,7 +841,7 @@
   </div>
   <script>
     function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
-    window.addEventListener('resize', () => { if (window.innerWidth > 860) document.getElementById('mobileMenu').classList.remove('open'); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 640) document.getElementById('mobileMenu').classList.remove('open'); });
   </script>
 
 </body>
