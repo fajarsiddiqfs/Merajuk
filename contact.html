@@ -478,9 +478,8 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      max-width: 880px;
+      grid-template-columns: 1fr;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -490,7 +489,7 @@
       border-radius: 20px;
       overflow: hidden;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       transition: border-color 0.25s ease, transform 0.25s ease;
       text-align: left;
     }
@@ -499,7 +498,9 @@
     .pricing-card.featured { border-color: #e8e8e8; }
 
     .pricing-icon-banner {
+      flex: 0 0 42%;
       aspect-ratio: 1 / 1;
+      align-self: flex-start;
       background: #0a0a0a;
       display: flex;
       align-items: center;
@@ -525,8 +526,61 @@
       margin-bottom: 14px;
     }
 
-    .pricing-card.featured .pricing-badge,
-    #videoAdCard .pricing-badge { background: #e8e8e8; color: #0a0a0a; border-color: #e8e8e8; }
+    .pricing-card.featured .pricing-badge { background: #e8e8e8; color: #0a0a0a; border-color: #e8e8e8; }
+
+    .pricing-plan-toggle {
+      position: relative;
+      display: inline-flex;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 999px;
+      padding: 4px;
+      margin-bottom: 20px;
+    }
+
+    .pricing-plan-slider {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: calc(50% - 4px);
+      height: calc(100% - 8px);
+      background: #e8e8e8;
+      border-radius: 999px;
+      transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+      z-index: 0;
+    }
+
+    .pricing-plan-toggle[data-active="box"] .pricing-plan-slider {
+      transform: translateX(100%);
+    }
+
+    .pricing-plan-btn {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: none;
+      background: transparent;
+      color: #888;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      appearance: none;
+      outline: none;
+      font-family: inherit;
+      transition: color 0.2s ease;
+    }
+
+    .pricing-plan-btn:hover { color: #ccc; }
+
+    .pricing-plan-btn.active { color: #0a0a0a; }
+
+    @media (max-width: 480px) {
+      .pricing-plan-toggle { width: 100%; }
+      .pricing-plan-btn { padding: 9px 12px; font-size: 12px; }
+    }
 
     .pricing-title {
       display: flex;
@@ -575,15 +629,16 @@
       transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
     }
 
-    .pricing-card.featured .pricing-cta,
-    #videoAdCard .pricing-cta { background: #e8e8e8; color: #0a0a0a; border-color: #e8e8e8; }
+    .pricing-card.featured .pricing-cta { background: #e8e8e8; color: #0a0a0a; border-color: #e8e8e8; }
     .pricing-cta:hover { transform: translateY(-2px); background: #e8e8e8; color: #0a0a0a; }
 
     .collab-note { max-width: 560px; margin: 32px auto 0; font-size: 13px; color: #555; }
     .collab-note a { color: #888; text-decoration: underline; text-underline-offset: 3px; }
 
     @media (max-width: 768px) {
-      .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .pricing-grid { max-width: 420px; }
+      .pricing-card { flex-direction: column; }
+      .pricing-icon-banner { flex: none; width: 100%; }
     }
 
     /* ── FOOTER ── */
@@ -737,37 +792,24 @@
 
       <div class="pricing-grid">
 
-        <div class="pricing-card" id="videoAdCard">
-          <div class="pricing-icon-banner"><i class="fas fa-clapperboard"></i></div>
+        <div class="pricing-card featured" id="collabCard">
+          <div class="pricing-icon-banner"><i class="fas fa-clapperboard" id="collabIcon"></i></div>
           <div class="pricing-body">
-            <span class="pricing-badge">Per Kempen</span>
-            <h3 class="pricing-title">Video Advertising</h3>
-            <p class="pricing-desc">Produk atau jenama anda dipaparkan dalam video TikTok rasmi @MerajukHQ — dari unboxing, ulasan produk, hingga kandungan kreatif yang sesuai dengan gaya audiens kami.</p>
+            <div class="pricing-plan-toggle" role="tablist" aria-label="Pilih jenis kerjasama" data-active="video" id="collabToggle">
+              <span class="pricing-plan-slider" aria-hidden="true"></span>
+              <button type="button" class="pricing-plan-btn active" data-plan="video" onclick="setCollabPlan('video')">Video Advertising</button>
+              <button type="button" class="pricing-plan-btn" data-plan="box" onclick="setCollabPlan('box')">Box Advertising</button>
+            </div>
+            <h3 class="pricing-title" id="collabTitle">Video Advertising</h3>
+            <p class="pricing-desc" id="collabDesc">Per Kempen — Produk atau jenama anda dipaparkan dalam video TikTok rasmi @MerajukHQ — dari unboxing, ulasan produk, hingga kandungan kreatif yang sesuai dengan gaya audiens kami.</p>
             <p class="pricing-features-label">Apa Yang Anda Dapat</p>
-            <ul class="pricing-features">
+            <ul class="pricing-features" id="collabFeatures">
               <li><i class="fas fa-check"></i> Video TikTok khusus jenama anda</li>
               <li><i class="fas fa-check"></i> Penyebutan &amp; pautan produk dalam bio</li>
               <li><i class="fas fa-check"></i> Laporan prestasi (views, engagement)</li>
               <li><i class="fas fa-check"></i> Pilihan repost ke Instagram/Shorts</li>
             </ul>
-            <a href="mailto:info@merajuk.com?subject=Kerjasama%20-%20Video%20Advertising" class="pricing-cta">Dapatkan Sebut Harga</a>
-          </div>
-        </div>
-
-        <div class="pricing-card featured">
-          <div class="pricing-icon-banner"><i class="fas fa-box-open"></i></div>
-          <div class="pricing-body">
-            <span class="pricing-badge">Per Kotak</span>
-            <h3 class="pricing-title">Box Advertising</h3>
-            <p class="pricing-desc">Letakkan produk, flyer, kupon atau sampel jenama anda terus ke dalam kotak Pujuk Box dan Merajuk Box yang sampai ke tangan pelanggan sebenar setiap bulan.</p>
-            <p class="pricing-features-label">Apa Yang Anda Dapat</p>
-            <ul class="pricing-features">
-              <li><i class="fas fa-check"></i> Ruang fizikal dalam Pujuk/Merajuk Box</li>
-              <li><i class="fas fa-check"></i> Sasaran pelanggan sedia ada Merajuk</li>
-              <li><i class="fas fa-check"></i> Pilihan sampel produk atau insert cetak</li>
-              <li><i class="fas fa-check"></i> Pakej gabungan dengan kempen bulanan</li>
-            </ul>
-            <a href="mailto:info@merajuk.com?subject=Kerjasama%20-%20Box%20Advertising" class="pricing-cta">Dapatkan Sebut Harga</a>
+            <a href="mailto:info@merajuk.com?subject=Kerjasama%20-%20Video%20Advertising" class="pricing-cta" id="collabCta">Dapatkan Sebut Harga</a>
           </div>
         </div>
 
@@ -869,6 +911,58 @@
   <script>
     function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
     window.addEventListener('resize', () => { if (window.innerWidth > 640) document.getElementById('mobileMenu').classList.remove('open'); });
+
+    // ── Collaboration: Video Advertising / Box Advertising toggle ──
+    (function () {
+      const collabPlans = {
+        video: {
+          title: 'Video Advertising',
+          desc: 'Per Kempen — Produk atau jenama anda dipaparkan dalam video TikTok rasmi @MerajukHQ — dari unboxing, ulasan produk, hingga kandungan kreatif yang sesuai dengan gaya audiens kami.',
+          icon: 'fa-clapperboard',
+          features: [
+            'Video TikTok khusus jenama anda',
+            'Penyebutan &amp; pautan produk dalam bio',
+            'Laporan prestasi (views, engagement)',
+            'Pilihan repost ke Instagram/Shorts'
+          ],
+          cta: 'mailto:info@merajuk.com?subject=Kerjasama%20-%20Video%20Advertising'
+        },
+        box: {
+          title: 'Box Advertising',
+          desc: 'Per Kotak — Letakkan produk, flyer, kupon atau sampel jenama anda terus ke dalam kotak Pujuk Box dan Merajuk Box yang sampai ke tangan pelanggan sebenar setiap bulan.',
+          icon: 'fa-box-open',
+          features: [
+            'Ruang fizikal dalam Pujuk/Merajuk Box',
+            'Sasaran pelanggan sedia ada Merajuk',
+            'Pilihan sampel produk atau insert cetak',
+            'Pakej gabungan dengan kempen bulanan'
+          ],
+          cta: 'mailto:info@merajuk.com?subject=Kerjasama%20-%20Box%20Advertising'
+        }
+      };
+
+      window.setCollabPlan = function (plan) {
+        const data = collabPlans[plan];
+        if (!data) return;
+        const title = document.getElementById('collabTitle');
+        const desc = document.getElementById('collabDesc');
+        const icon = document.getElementById('collabIcon');
+        const cta = document.getElementById('collabCta');
+        const featuresList = document.getElementById('collabFeatures');
+        const toggle = document.getElementById('collabToggle');
+        if (title) title.textContent = data.title;
+        if (desc) desc.textContent = data.desc;
+        if (icon) icon.className = 'fas ' + data.icon;
+        if (cta) cta.href = data.cta;
+        if (featuresList) {
+          featuresList.innerHTML = data.features.map((f) => `<li><i class="fas fa-check"></i> ${f}</li>`).join('');
+        }
+        if (toggle) toggle.setAttribute('data-active', plan);
+        document.querySelectorAll('#collabToggle .pricing-plan-btn').forEach((btn) => {
+          btn.classList.toggle('active', btn.dataset.plan === plan);
+        });
+      };
+    })();
   </script>
 
 </body>
