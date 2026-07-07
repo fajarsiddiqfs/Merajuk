@@ -479,7 +479,7 @@
     .pricing-grid {
       display: grid;
       grid-template-columns: 1fr;
-      max-width: 900px;
+      max-width: 1140px;
       margin: 0 auto;
     }
 
@@ -498,9 +498,9 @@
     .pricing-card.featured { border-color: #e8e8e8; }
 
     .pricing-icon-banner {
-      flex: 0 0 42%;
+      flex-shrink: 0;
       aspect-ratio: 1 / 1;
-      align-self: flex-start;
+      align-self: stretch;
       background: #0a0a0a;
       display: flex;
       align-items: center;
@@ -638,7 +638,7 @@
     @media (max-width: 768px) {
       .pricing-grid { max-width: 420px; }
       .pricing-card { flex-direction: column; }
-      .pricing-icon-banner { flex: none; width: 100%; }
+      .pricing-icon-banner { flex: none; width: 100%; aspect-ratio: 1 / 1; align-self: auto; }
     }
 
     /* ── FOOTER ── */
