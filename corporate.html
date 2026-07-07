@@ -748,9 +748,9 @@
 
     .pricing-slider {
       position: relative;
-      flex-shrink: 0;
+      flex: 0 0 42%;
       aspect-ratio: 1 / 1;
-      align-self: stretch;
+      align-self: flex-start;
       overflow: hidden;
       background: #0a0a0a;
     }
@@ -1940,6 +1940,34 @@
     });
 
     setTimeout(type, 800);
+  </script>
+  <script>
+    // Make the image slider a true square that exactly matches the height
+    // of the text side, without relying on CSS aspect-ratio + stretch
+    // (which can blow up in size due to circular flex sizing on real content).
+    (function () {
+      function syncSquares() {
+        document.querySelectorAll('.pricing-card').forEach(function (card) {
+          var square = card.querySelector('.pricing-slider, .pricing-icon-banner');
+          var body = card.querySelector('.pricing-body');
+          if (!square || !body) return;
+
+          if (window.innerWidth <= 768) {
+            square.style.width = '';
+            square.style.height = '';
+            return;
+          }
+
+          var h = body.offsetHeight;
+          square.style.width = h + 'px';
+          square.style.height = h + 'px';
+        });
+      }
+
+      window.addEventListener('load', syncSquares);
+      window.addEventListener('resize', syncSquares);
+      window.addEventListener('load', function () { setTimeout(syncSquares, 300); });
+    })();
   </script>
 </body>
 </html>
