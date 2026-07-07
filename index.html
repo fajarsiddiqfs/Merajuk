@@ -1986,28 +1986,51 @@
     // of the text side, without relying on CSS aspect-ratio + stretch
     // (which can blow up in size due to circular flex sizing on real content).
     (function () {
-      function syncSquares() {
-        document.querySelectorAll('.pricing-card').forEach(function (card) {
-          var square = card.querySelector('.pricing-slider, .pricing-icon-banner');
-          var body = card.querySelector('.pricing-body');
-          if (!square || !body) return;
+      function applySync(card) {
+        var square = card.querySelector('.pricing-slider, .pricing-icon-banner');
+        var body = card.querySelector('.pricing-body');
+        if (!square || !body) return;
 
-          if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 768) {
+          if (square.style.width !== '' || square.style.height !== '') {
             square.style.width = '';
             square.style.height = '';
-            return;
           }
+          return;
+        }
 
-          var h = body.offsetHeight;
-          square.style.width = h + 'px';
-          square.style.height = h + 'px';
+        var h = body.offsetHeight;
+        var current = parseFloat(square.style.height) || 0;
+        // Skip the write if the size hasn't actually changed — this is what
+        // avoids the "ResizeObserver loop completed with undelivered
+        // notifications" warning, since resizing the square would otherwise
+        // re-trigger a layout change on the observed element every frame.
+        if (Math.abs(current - h) < 1) return;
+        square.style.width = h + 'px';
+        square.style.height = h + 'px';
+      }
+
+      function initSync() {
+        var cards = document.querySelectorAll('.pricing-card');
+        cards.forEach(function (card) {
+          var body = card.querySelector('.pricing-body');
+          if (!body) return;
+          applySync(card);
+          if (window.ResizeObserver) {
+            var ro = new ResizeObserver(function () {
+              window.requestAnimationFrame(function () { applySync(card); });
+            });
+            ro.observe(body);
+          }
         });
       }
 
-      window.addEventListener('load', syncSquares);
-      window.addEventListener('resize', syncSquares);
-      // Re-check shortly after load in case images/fonts shift the text height
-      window.addEventListener('load', function () { setTimeout(syncSquares, 300); });
+      document.addEventListener('DOMContentLoaded', initSync);
+      window.addEventListener('resize', function () {
+        window.requestAnimationFrame(function () {
+          document.querySelectorAll('.pricing-card').forEach(applySync);
+        });
+      });
     })();
   </script>
 </body>
