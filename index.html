@@ -1416,7 +1416,7 @@
                 <li><i class="fas fa-check"></i> Kad mesej peribadi</li>
                 <li><i class="fas fa-check"></i> Kejutan Kotak Duit</li>
               </ul>
-              <a href="https://merajuk.com/whatsapp" target="_blank" rel="noopener noreferrer" class="pricing-cta" id="merajukCta">Langgan Bulanan</a>
+              <a href="https://merajuk.com/subscribe" target="_blank" rel="noopener noreferrer" class="pricing-cta" id="merajukCta">Langgan Bulanan</a>
             </div>
           </div>
 
@@ -1766,11 +1766,13 @@
       const plans = {
         sekali: {
           desc: 'Kotak sekali beli untuk memujuk.',
-          cta: 'Sekali Beli'
+          cta: 'Sekali Beli',
+          href: 'https://merajuk.com/buy-once'
         },
         bulanan: {
           desc: 'Kotak bulanan untuk mengeratkan hubungan.',
-          cta: 'Langgan Bulanan'
+          cta: 'Langgan Bulanan',
+          href: 'https://merajuk.com/subscribe'
         }
       };
 
@@ -1781,7 +1783,10 @@
         const cta = document.getElementById('merajukCta');
         const toggle = document.getElementById('planToggle');
         if (desc) desc.textContent = data.desc;
-        if (cta) cta.textContent = data.cta;
+        if (cta) {
+          cta.textContent = data.cta;
+          cta.setAttribute('href', data.href);
+        }
         if (toggle) toggle.setAttribute('data-active', plan);
         document.querySelectorAll('.pricing-plan-btn').forEach((btn) => {
           btn.classList.toggle('active', btn.dataset.plan === plan);

@@ -1411,7 +1411,7 @@
                 <li><i class="fas fa-check"></i> Swag &amp; Merchandise</li>
                 <li><i class="fas fa-check"></i> Kad mesej peribadi</li>
               </ul>
-              <a href="contact.html" class="pricing-cta">Hubungi Kami</a>
+              <a href="https://merajuk.com/b2b-100" target="_blank" rel="noopener noreferrer" class="pricing-cta" id="moqCta">Hubungi Kami</a>
             </div>
           </div>
 
@@ -1736,17 +1736,19 @@
 
     // ── Custom Box: 50 MOQ / 100 MOQ toggle ──
     (function () {
-      const moqDesc = {
-        '50': '50 MOQ minimum custom box order',
-        '100': '100 MOQ minimum custom box order'
+      const moqPlans = {
+        '50': { desc: '50 MOQ minimum custom box order', href: 'https://merajuk.com/b2b-50' },
+        '100': { desc: '100 MOQ minimum custom box order', href: 'https://merajuk.com/b2b-100' }
       };
 
       window.setMoqPlan = function (moq) {
-        const text = moqDesc[moq];
-        if (!text) return;
+        const data = moqPlans[moq];
+        if (!data) return;
         const desc = document.getElementById('moqDesc');
+        const cta = document.getElementById('moqCta');
         const toggle = document.getElementById('moqToggle');
-        if (desc) desc.textContent = text;
+        if (desc) desc.textContent = data.desc;
+        if (cta) cta.setAttribute('href', data.href);
         if (toggle) toggle.setAttribute('data-active', moq);
         document.querySelectorAll('#moqToggle .pricing-plan-btn').forEach((btn) => {
           btn.classList.toggle('active', btn.dataset.moq === moq);
