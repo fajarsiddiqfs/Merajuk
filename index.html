@@ -715,7 +715,7 @@
     .pricing-grid {
       display: grid;
       grid-template-columns: 1fr;
-      max-width: 900px;
+      max-width: 1140px;
       margin: 0 auto;
       text-align: left;
     }
@@ -736,9 +736,9 @@
 
     .pricing-slider {
       position: relative;
-      flex: 0 0 42%;
+      flex-shrink: 0;
       aspect-ratio: 1 / 1;
-      align-self: flex-start;
+      align-self: stretch;
       overflow: hidden;
       background: #0a0a0a;
     }
@@ -977,7 +977,7 @@
     @media (max-width: 768px) {
       .pricing-grid { max-width: 420px; }
       .pricing-card { flex-direction: column; }
-      .pricing-slider { flex: none; width: 100%; }
+      .pricing-slider { flex: none; width: 100%; aspect-ratio: 1 / 1; align-self: auto; }
     }
 
     /* ── TIKTOK CAROUSEL SECTION ── */
