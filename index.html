@@ -412,7 +412,9 @@
       animation-name: scrollDown;
     }
 
-    .video-col:hover { animation-play-state: paused; }
+    @media (hover: hover) and (pointer: fine) {
+      .video-col:hover { animation-play-state: paused; }
+    }
 
     @keyframes scrollUp {
       from { transform: translateY(0); }
