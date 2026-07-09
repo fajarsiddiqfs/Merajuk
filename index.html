@@ -1916,7 +1916,6 @@
           if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return; // not enough movement yet
           touchIsHorizontal = Math.abs(dx) > Math.abs(dy);
           if (!touchIsHorizontal) return; // vertical page scroll, leave carousel alone
-          pauseAuto();
         }
         track.scrollLeft = touchStartScroll - dx;
       }, { passive: true });
