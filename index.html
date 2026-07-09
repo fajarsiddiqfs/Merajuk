@@ -2021,7 +2021,6 @@
         // notifications" warning, since resizing the square would otherwise
         // re-trigger a layout change on the observed element every frame.
         if (Math.abs(current - h) < 1) return;
-        square.style.width = h + 'px';
         square.style.height = h + 'px';
       }
 
